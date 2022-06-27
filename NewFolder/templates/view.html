@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+    
+{% block content %}
+    
+    <!-- Main Area -->
+    <div id="id-5435-v">
+           <h1>{{response.heading}}</h1>
+           <h4><span style="padding:0px 10px 0px 0px;">by - {{response.author}}</span>|<span style="padding:0px 10px;">{{response.date}}</span>|<span style="padding: 0 10px">{{response.time}}</span><span  style="padding:0px 10px;cursor:pointer" id="id-43re-2424-2342-2222">Report this article</span></h4>
+          <div style="padding-top:20px; font-size: 25px"> 
+           {% if blog %}
+           {{response.blog|safe}}
+           {% endif %} 
+           {% if news %}
+           {{response.news|safe}}
+           {% endif %}
+          </div>  
+    </div>
+
+    <div id="id-24234-jkfhh-2342">
+        <div id="id-24234-jkfhh-2342-01">
+            <h4 style="font-size:20px">Recommended Articles</h4>
+        </div>
+        <hr>
+        <div id="id-24234-jkfhh-2342-01">
+           {% for i in data %} 
+            <div class="cl-0121-014-03-01-01-01-01" id="id-0121-014-03-01-01-01-01">
+                <div id="id-0121-014-03-01-001">
+                    <div id="id-0121-014-03-01-01-01-01-n">
+                        {% if news %}
+                            <a href="/news/read/view/{{i.heading_url}}">
+                        {% endif %}
+                        {% if blog %}
+                            <a href="/blog/read/view/{{i.heading_url}}">
+                        {% endif %}
+                            <div id="id-0121-014-03-01-01-01-01-n-n">
+                                <h4 id="id-tle-01-hde">{{i.heading}}</h4>
+                            </div>
+                        </a>
+                    </div>   
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- End Main Area -->
+
+    <div style="height: 100pc; width:100%"></div>
+<script>
+    
+</script>
+{% endblock %}

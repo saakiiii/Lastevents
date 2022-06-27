@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+    
+{% block content %}
+
+    <!-- Main Area -->
+    <div id="-id-a-4552_0yy">
+        <div id="-id-a-4552_0yy-01"><h3>Add your blog article here</h3></div>
+        <div id="-id-a-4552_0yy-02"><a href="/blog/write" style="text-decoration:none"><button id="id-1234-3032-06-01-btn-0_131">Write here</button></a></div>
+    </div>
+    <div class="cat-root">
+        <div class="matem-" style="padding:10px 0px 10px 3px">
+            <p style="margin:0px">Recent Updates</p>
+         </div>
+        {% for i in response %}
+        <div class="matem">
+            <div id="matem-header">
+                <div id="matem-he-1">
+                    <h3>{{i.author}}</h3>
+                </div>
+                <div id="matem-he-2">
+                    <h3><span>{{i.date}}</span><span style="padding-left:10px">{{i.time}}</span></h3>
+                </div>
+                <!--<div id="matem-he-3">
+                </div>-->
+            </div>
+            <div id="matem-bo-co">
+                <div id="matem-bo-co-title">
+                    <h2><a href="/blog/read/view/{{i.heading_url}}">{{i.heading}}</a></h2>
+                </div>
+                {% if i.tbnail != None %}
+                <div id="matem-bo-co-image">
+                    <img id="b-re-3242ed-" src="{{i.tbnail}}" alt="..." width="500" height="375" style="border:1px solid white" data-filename="{{i.tbfilename}}">
+                </div>
+                {% endif %}
+                <div id="matem-bo-co-text">
+                    <p>The place for description of the text but is optional type value.</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div> 
+    <div id="id-0131-3131-btn-01">
+        <button id="id-0131-3131-btn-01-01" onclick="f2343();"><span class="material-symbols-outlined">
+            arrow_upward
+            </span>
+        </button>
+    </div>
+    <!-- End Main Area -->
+
+{% endblock %}
