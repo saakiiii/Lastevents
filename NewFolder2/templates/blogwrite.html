@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+ <div id="id-4233-w">
+
+    </div>
+    <!-- Main Area -->
+    <div id="id-4234-w">
+           <div id="id-4234-w-01">
+            <h3><span><a href="/news/write" style="text-decoration:underline">News Article - Write</a></span><span style="padding-left:20px">Blog Article - Write</span><span style="padding-left:20px"><a href="/wofday/write" style="text-decoration:underline">Word of the day - Write</a></span></h3>
+            <h3>{{alert}}</h3>
+        </div>
+            <hr>
+
+    <form id="___23-34KFLjafasujiibafi" action="/blog/article/write{{getvalue}}" method="post" data-element="id-4234-w-01-03-btn">
+            <div id="id-4234-w-01-02-3543">
+                <textarea class="cl-4234-w-01-02-01-fss-" id="id-4234-w-01-02-01-fss-" style='{{headalert}}' placeholder="Heading" name="heading" data-id="_8sf6798asdfoa876857" data-element="{{draftvalue}}" required>{{blog_heading}}</textarea>
+                <p>{{head_url_alert}}</p>
+            </div>
+
+            <div id="id-4234-w-01-02">
+                <textarea class="cl-4234-w-01-02-01" id="summernote" style='{{blogalert}}' name="blog" data-id="_8sf6798asdfoa876857f" data-element="{{draftvalue}}" required>{{blog_blog}}</textarea>
+                <p>{{body_alert}}</p>
+            </div>
+            <input name="d_a8df0" hidden value="{{draftvalue}}">
+            <div id="id-4234-w-01-01">
+                <div id="id-4234-w-01-01-01-kw-sw">
+                </div>
+                <div id="id-4234-w-01-01-01-kw" style="padding-bottom: 20px; padding-left:0px; text-align:left;">
+                    <input id="id-4234-w-01-01-01-in-kyw" onfocus="this.value=''" name="keywords" placeholder="Keywords">
+                    <button type="button" id="id-4234-w-01-01-01-in-kw" onclick="f2344();">Add</button>
+                    <p id="al-kw-24223" style="padding-top:10px;"></p>
+                </div>
+
+            </div>
+            {% if editing__ == None %}
+            <div id="id-adfn_afdjlk-">
+                <div id="id-28401___">
+                    <p>Share the link of this article in social networks?</p>
+                </div>
+                <div id="id-28402___">
+                    <label for="id-ch-9342">Yes</label>
+                    <input type="radio" id="id-ch-9342" checked="checked" name="perm_" value="1">
+                </div>
+                <div id="id-28403___">
+                    <label for="id-ch-9343">No</label>
+                    <input type="radio" id="id-ch-9343" name="perm_" value="0">
+                </div>
+            </div>
+            {% endif %}
+            <div id="id-4234-w-01-03">
+                <button type="submit" id="id-4234-w-01-03-btn">Publish</button>
+            </div>
+        </form>
+    </div>
+    <!-- End Main Area -->
+
+    <div style="height: 100pc; width:100%"></div>
+</body>
+<script>
+   $(document).ready(function(){
+     $("#summernote").summernote({
+        height:300,
+        focus: true,
+        backColor:"black",
+        foreColor:"black",
+
+     });
+   })
+</script>
+
+{% endblock %}

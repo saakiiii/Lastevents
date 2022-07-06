@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Main Area -->
+    <!--<div id="-id-a-4552_0yy">
+        <div id="-id-a-4552_0yy-01"><h3>Add your blog article here</h3></div>
+        <div id="-id-a-4552_0yy-02"><a href="/blog/write" style="text-decoration:none"><button id="id-1234-3032-06-01-btn-0_131">Write here</button></a></div>
+    </div>-->
+    <div class="cat-root">
+        <div class="matem-" style="padding:10px 0px 10px 3px">
+            <div style="display:inline-block;width:49%;text-align:center">
+                <p style="margin:0px">Recent Updates</p>
+            </div>
+            <div style="display:inline-block;width:49%;text-align:center">
+                <a href="/blog/write" style="margin:0px">Write-in-this-space</a>
+            </div>
+         </div>
+        {% for i in response %}
+        <div class="matem">
+            <div id="matem-header">
+                <div id="matem-he-1">
+                    <h3>{{i.author}}</h3>
+                </div>
+                <div id="matem-he-2">
+                   {% if i.time_ago != None %} 
+                    <h3><span>{{i.time_ago}}</span></h3>
+                   {% endif %}
+                   {% if i.time_ago == None %}
+                    <h3><span>{{i.date}}</span></h3>
+                   {% endif %}
+                </div>
+                <div id="matem-he-3">
+                    <div id="id-sh-96h_saf-">
+                        <a title="Tweet" target="_blank" href="http://twitter.com/intent/tweet?text={{i.heading}}&url=https://www.lastevents.space/news/read/view/{{i.heading_url}}">
+                          <div id="id-sh-btn-asssf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zm-59.942 195.935a161.34 161.34 0 0 1-47.079 12.85c16.914-10.086 29.894-26.22 36.095-45.413-15.862 9.39-33.473 16.287-52.087 19.96-15.048-15.92-36.343-25.83-59.942-25.83-45.331 0-82.04 36.685-82.04 82.016 0 6.355.685 12.626 2.09 18.674-68.186-3.484-128.647-36.13-169.148-85.785a82.08 82.08 0 0 0-11.126 41.245c0 28.465 14.457 53.623 36.485 68.257-13.465-.39-26.068-4.11-37.206-10.205v1.04c0 39.756 28.3 72.969 65.86 80.48a82.817 82.817 0 0 1-21.627 2.883c-5.291 0-10.405-.52-15.472-1.477 10.453 32.587 40.713 56.351 76.642 57-28.134 22.04-63.473 35.163-101.954 35.163-6.65 0-13.134-.39-19.606-1.146 36.39 23.362 79.524 36.85 125.872 36.85 150.935 0 233.507-125.056 233.507-233.494 0-3.603-.06-7.122-.236-10.654 16.027-11.457 29.965-25.937 40.925-42.378l.048-.036z"/></svg>
+                          </div>
+                        </a>
+                        <a title="Whatsapp" target="_blank" href="https://api.whatsapp.com/send?text={{i.heading}} https://www.lastevents.space/news/read/view/{{i.heading_url}} ">
+                        <div  id="id-sh-btn-asssf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zM473.143 165.876c-40.666-40.748-94.726-63.166-152.34-63.166-118.655 0-215.223 96.592-215.223 215.329 0 37.95 9.921 75.036 28.772 107.647l-30.59 111.604 114.178-29.93c31.489 17.138 66.887 26.21 102.863 26.21h.071c118.667 0 215.353-96.604 215.353-215.319 0-57.579-22.394-111.639-63.084-152.364v-.011zm-152.27 331.362c-32.185 0-63.662-8.67-91.135-24.98l-6.555-3.898-67.76 17.776 18.094-66.06-4.217-6.792c-18.06-28.43-27.425-61.347-27.425-95.221 0-98.706 80.28-179.057 179.093-179.057 47.776 0 92.812 18.697 126.58 52.477 33.744 33.827 52.359 78.768 52.359 126.639-.095 98.788-80.399 179.093-179.034 179.093v.023zm98.139-134.116c-5.339-2.705-31.831-15.65-36.756-17.469-4.89-1.842-8.516-2.752-12.166 2.693-3.52 5.363-13.878 17.54-17.032 21.154-3.141 3.555-6.26 4.04-11.61 1.347-5.374-2.693-22.784-8.41-43.312-26.717-15.98-14.292-26.787-31.938-29.953-37.288-3.177-5.315-.342-8.339 2.386-10.926 2.48-2.41 5.374-6.295 8.09-9.437 2.73-3.141 3.556-5.338 5.351-9 1.772-3.543.898-6.673-.449-9.413-1.346-2.693-12.153-29.221-16.523-39.993-4.335-10.524-8.823-9.06-12.142-9.272-3.166-.13-6.697-.13-10.288-.13-3.543 0-9.378 1.335-14.35 6.733-4.926 5.327-18.827 18.378-18.827 44.87 0 26.493 19.228 52.04 21.957 55.69 2.74 3.567 37.96 57.957 91.926 81.26 12.839 5.493 22.855 8.8 30.638 11.328 12.922 4.11 24.615 3.508 33.886 2.138 10.323-1.524 31.82-12.98 36.32-25.572 4.523-12.579 4.523-23.303 3.153-25.535-1.287-2.398-4.819-3.697-10.287-6.473l-.012.012z"/></svg>
+                        </div>
+                        </a>
+                        <a  title="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.lastevents.space/news/read/view/{{i.heading_url}}">
+                            <div id="id-sh-btn-asssf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm186 1117h311V744h-311c-240 0-435 195-435 435v186h-249v373h249v994h373v-994h311l62-373h-373v-186c0-34 28-62 62-62z"/></svg>
+                            </div>
+                        </a>
+                        </div>
+                </div>
+                <!--<div id="matem-he-3">
+                </div>-->
+            </div>
+            <div id="matem-bo-co">
+                <div id="matem-bo-co-title">
+                    <h2><a href="/blog/read/view/{{i.heading_url}}">{{i.heading}}</a></h2>
+                </div>
+                {% if i.tbnail != None %}
+                <div id="matem-bo-co-image">
+                    <img id="b-re-3242ed-" src="{{i.tbnail}}" alt="..." width="500" height="375" style="border:1px solid white" data-filename="{{i.tbfilename}}">
+                </div>
+                {% endif %}
+                <div id="matem-bo-co-text">
+                    {{i.description|safe}}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div id="id-0131-3131-btn-01-01_">
+        <a href="/blog/write"><button id="id-0131-3131-btn-01-01"><span class="material-symbols-outlined">
+            edit
+            </span>
+        </button></a>
+    </div>
+    <div id="id-0131-3131-btn-01">
+        <button id="id-0131-3131-btn-01-01" onclick="f2343();"><span class="material-symbols-outlined">
+            arrow_upward
+            </span>
+        </button>
+    </div>
+
+
+    <!-- End Main Area -->
+
+{% endblock %}
