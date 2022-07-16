@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+ <div id="id-4233-w">
+
+    </div>
+    <!-- Main Area -->
+    <div class="cl-4203840-ufsadfu" id="id-4234-w">
+           <div id="id-4234-w-01">
+            <h3>{{alert}}</h3>
+            <a href="/news/write">
+                <div id="id-342342-23424234-234234">
+                   Write News Article
+                </div>
+            </a>
+            <a href="/blog/write">
+                <div id="id-342342-23424234-234234" style="background:#339952; color:white;">
+                    Write Blog Article
+                </div>
+            </a>
+            <a href="/wofday/write">
+                <div id="id-342342-23424234-234234">
+                    Write Today word
+                </div>
+            </a>
+        </div>
+            <hr>
+    {% if editing__ == None %}
+    <div id="id-03948afads8f8a79dsfa-fasdf79a87df9">
+        <div id="id-03948afads8f8a79dsfa-fasdf79a87df9-829">
+            Do you want to create a draft?
+        </div>
+        <div id="id-03948afads8f8a79dsfa-fasdf79a87df9-830">
+            <button id="id-3423874927349234-2342342-adfsaf">Create Draft</button>
+        </div>
+    </div>
+    {% endif %}
+    <form id="___23-34KFLjafasujiibafi" action="/blog/article/write{{getvalue}}" method="post" data-element="id-4234-w-01-03-btn">
+            <div id="id-4234-w-01-02-3543">
+                <textarea class="cl-4234-w-01-02-01-fss-" id="id-4234-w-01-02-01-fss-" style='{{headalert}}' placeholder="Heading" name="heading" data-id="_8sf6798asdfoa876857" data-element="{{draftvalue}}" required>{{blog_heading}}</textarea>
+                <p>{{head_url_alert}}</p>
+            </div>
+
+            <div id="id-4234-w-01-02">
+                <textarea class="cl-4234-w-01-02-01" id="summernote" style='{{blogalert}}' name="blog" data-id="_8sf6798asdfoa876857f" data-element="{{draftvalue}}" required>{{blog_blog}}</textarea>
+                <p>{{body_alert}}</p>
+            </div>
+            <input name="d_a8df0" hidden value="{{draftvalue}}">
+            <div id="id-4234-w-01-01">
+                <div id="id-4234-w-01-01-01-kw-sw">
+                </div>
+                <div id="id-4234-w-01-01-01-kw" style="padding-bottom: 20px; padding-left:0px; text-align:left;">
+                    <input id="id-4234-w-01-01-01-in-kyw" onfocus="this.value=''" name="keywords" placeholder="Keywords">
+                    <button type="button" id="id-4234-w-01-01-01-in-kw" onclick="f2344();">Add</button>
+                    <p id="al-kw-24223" style="padding-top:10px;"></p>
+                </div>
+
+            </div>
+            {% if editing__ == None %}
+            <div id="id-adfn_afdjlk-">
+                <div id="id-28401___">
+                    <p>Share the link of this article in social networks?</p>
+                </div>
+                <div id="id-28402___">
+                    <label for="id-ch-9342">Yes</label>
+                    <input type="radio" id="id-ch-9342" checked="checked" name="perm_" value="1">
+                </div>
+                <div id="id-28403___">
+                    <label for="id-ch-9343">No</label>
+                    <input type="radio" id="id-ch-9343" name="perm_" value="0">
+                </div>
+            </div>
+            {% endif %}
+            <div id="id-4234-w-01-03">
+                <button type="submit" id="id-4234-w-01-03-btn">Publish</button>
+            </div>
+        </form>
+    </div>
+
+    <div style="height: 100pc; width:100%"></div>
+</body>
+<script>
+   $(document).ready(function(){
+     $("#summernote").summernote({
+        height:300,
+        backColor:"black",
+        foreColor:"black",
+        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Verdana'],
+        placeholder:"Write your article...",
+        toolbar: [
+        // [groupName, [list of button]]
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['fontsize',['fontsize']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['height', ['height']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture']],
+        ['view', ['fullscreen', 'help']],
+      ]
+     });
+     $('#summernote').summernote('fontName', 'Verdana');
+     $('#summernote').summernote('fontSize', '18');
+   })
+</script>
+   <script>
+</script>
+   {% endblock %}

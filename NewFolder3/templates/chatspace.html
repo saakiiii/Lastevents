@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="id-laskdjla-349234020-9879667869">
+        <div id="id-aldfour-adfasdfyafia-foasdf-adfafa">
+            <div id="id-adoui3-adf987908ads0f8a9789">
+                <p>Common chat space</p>
+            </div>
+        </div>
+        <div id="id-laskdjla-349234020-9879667869-02">
+          {% for i in chats %}
+          {% if i.user_id == user_id %}
+        <div id="id-arraafi">
+            <div id="id-mead080adfa">
+                <div id="id-ch-temp842342322">
+                    <div id="id-de-aldfj0" data-id="true">
+                        <span id ="id-adjflakfjuoy34234-gjhgj" data-element="da-adfakje-jllkj-2342480240234-29-{{chats.index(i)}}-ASDFA" class="material-symbols-outlined">
+                            more_vert
+                        </span>
+                    </div>
+                    <a id="id-0a-adfadf" href="/api/delete/c476/{{i.chat_id}}" data-id="da-adfakje-jllkj-2342480240234-29-{{chats.index(i)}}-ASDFA" data-element="da-adfakje-jllkj-2342480240234-29-{{chats.index(i)}}-ASDFA">
+                        delete
+                    </a>
+                    <p>{{i.text}}</p>    
+                </div>
+            </div>
+        </div>    
+          {% endif %}
+          {% if i.user_id != user_id %}
+          <div id="id-arraafi">
+          <div id="id-youasdfawe-342">
+            <div id="id-ch-temp842342322">
+                <div id="id-de-aldfj0" data-id="true">
+                    <span id ="id-adjflakfjuoy34234-gjhgj" data-element="'da-adfakje-jllkj-'+2342480240234-29-{{chats.index(i)}}+'ASDFA'" class="material-symbols-outlined">
+                        more_vert
+                    </span>
+                </div>
+                <div id="id-0a-adfadf" data-id="'da-adfakje-jllkj-'+2342480240234-29-{{chats.index(i)}}+'ASDFA'" data-element="'da-adfakje-jllkj-'+2342480240234-29-{{chats.index(i)}}+'ASDFA'">
+                    delete
+                </div>
+                <p>{{i.text}}</p>
+                
+            </div>
+        </div>
+    </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <div id="id-laskdjla-349234020-9879667869-01">
+            <div id="id-uoadfkjl_34234">
+                <input id="id-AFsfasdASDF-338497" placeholder="Type your message here" type="text">
+            </div>
+            <div id="id-io32u4ljlkdjf">
+                <button id="id-asdlkjfal-btn0adadadfjl">Send</button>
+            </div>    
+        </div>
+    </div>
+
+{% endblock %}

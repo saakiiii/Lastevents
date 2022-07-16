@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="id-34234-2413204801">
+        <div id="id-ofa-3123840980">
+            <p>{{val}} Spaces</p>
+        </div>
+        <div id="id-ofa-3123840981">
+            <input type="search" id="id-234-adifaj0983804-23424" placeholder="Search {{val}}">
+        </div>
+    </div>
+    {% if val != 'Main' %}
+    {% if val == 'subgroup' %}
+    <div id="id-iu880f8adf90-adfaf">
+        <div id="id-42098340293480-eafasdfa-324c234"><a href="/chat/randomChatrooomid">Enter into group chat space</a></div>
+    </div>
+    {% endif %}
+    {% if val == 'member' %}
+    <div id="id-iu880f8adf90-adfaf">
+        <div id="id-42098340293480-eafasdfa-324c234"><a href="/chat/randomChatrooomid">Enter into group chat space</a></div>
+    </div>
+    {% endif %}
+    {% if pinned_message %}
+    <div id="id-iadsofu-afasjflakjlafaddf">
+        <div id="id-q809e8rq0wer09qr0q9w8er0-qwerwe">
+            <div id="id-frqo-asf9a87f9a-adfa9sd8f6a87sdf">
+                <p>Pinned Message</p>
+            </div>
+            <div id="id-a9f9a79fa-adf79873r803-dfadsf87a98dsf9ss">
+                <p>This is the message pinned by the coordinator</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% if val =='Subgroup' %}
+    <div id="id-82040-adjflkj2j-324234">
+        <div id="id-82040-adjflkj2j-324234-01">
+            <div id="id-82040-adjflkj2j-324234-01-01">
+                <span id="id-3240192834-41230480923848-lqw98402" data-element="true" class="material-symbols-outlined" style="position:absolute; right:35px; font-size: 53px; cursor:pointer;">
+                    arrow_drop_down
+                    </span>
+                    <p>{{high_contributor.username}}</p>
+                    <p>{{high_contributor.state}}</p>
+                    <p>Head Coordinator</p>
+                    <p>Contributions {{high_contributor.contributions}}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if val =='Member' %}
+    <div id="id-82040-adjflkj2j-324234">
+        <div id="id-82040-adjflkj2j-324234-01">
+            <div id="id-82040-adjflkj2j-324234-01-01">
+                <span id="id-3240192834-41230480923848-lqw98402" data-element="true" class="material-symbols-outlined" style="position:absolute; right:35px; font-size: 53px; cursor:pointer;">
+                    arrow_drop_down
+                    </span>
+                    <p>{{high_contributor.username}}</p>
+                    <p>Coordinator</p>
+                    <p>Contributions {{high_contributor.contributions}}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <div id="id-348029809412_2987202-hhKIasdnkJ">
+        {% for i in groups %}
+       <div id="id-348029809412_2987202-hhKIasdnkJ-01">
+            <div id="id-348029809412_2987202-hhKIasdnkJ-01-08789790">
+                <div id="id-348029809412_2987202-hhKIasdnkJ-01-08789790-01">
+                    <div id="id-348029809412_2987202-hhKIasdnkJ-01-08789790-01-01">
+                        <div id="id-87234uosadahfjash">
+                            {% if val == 'Main' %}
+                                <a href="/groups/root/space/{{i.username}}"><p>{{i.username}}</p></a>
+                            {% endif %}
+                            {% if val == 'Subgroup' %}
+                                <a href="/groups/root/space/{{group_}}/{{i.username}}"><p>{{i.username}}</p></a>
+                            {% endif %}
+                            {% if val == 'Member' %}
+                                <a>{{i.username}}</a>
+                            {% endif %}
+                        </div>
+                        <div id="id-87234uosadahfjasi">
+                            {% if val == 'Main' %}
+                            <p>Group Contributions {{i.contributions}}</p>
+                            {% endif %}
+                            {% if val == 'Subgroup' %}
+                            <p>Group Contributions {{i.contributions}}</p>
+                            {% endif %}
+                            {% if val == 'Member' %}
+                            <p>Contributions {{i.contributions}}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+       {% endfor %}
+    </div>
+    <div id="id-348029809412_2987202-hhKIasdnkL">
+    </div>
+    <div id="id-87970897985-sdfs57476589798">
+    </div>
+{% endblock %}

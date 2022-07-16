@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Main Area -->
+    <div id="id-24032340284242-01">
+        <div id="id-24032340284242-01-01">
+            <div id="id-24032340284242-01-01-01">
+                <h1>Earning | Info</h1>
+            <div id="id-24032340284242-01-01-02">
+            <strong>
+                <p>We proudly welcome you to lastevents.space</p>
+                <p>We provide you a space to earn money through your news, and articles.
+                </p>
+            </strong>
+                <p>For each post (News, Blog articles) you get 10 contributions. When your contribution value is greater than '75' you can start earning money.
+                </p>
+                <p>(You need seven articles to reach 75)</p>
+                <p>You can write in your own style,(write the event as you would tell your friend) you can also write as per the <span><a>sample templates</a></span></p>
+                <p>Creating a article perday will improve your earning.</p>
+                <br>
+                <p>If your article contains any inappropriate content or data, readers can
+                    report your article. If the reporting rate is more than certain value your post will be removed.
+                </p>
+                <p>If you have images related your news article post them, it will improve the quality of your article</p>
+                <p>You may also post your own animations images as well</p>
+                <p>In your article</p>
+                <ul>
+                    <li>Avoid aggressive or cuss words</li>
+                    <li>Sometimes it is better to avoid writing your own opinions</li>
+                    <li>Avoid copyrights problem</li>
+                </ul>
+                <p>Don't put your article in any trouble of getting deleted from the database by
+                    copying from any other media. It will affect your earning. You can refer any other sources, social media platforms and so on to get information
+                </p>
+                <br>
+                <p>You can see your contributions, articles data, income data in the <span><a href="/data/me">'me'</a></span> tab.</p>
+                <p>We will update the income at end of the month.</p>
+                <p>Your earning depends upon the count of articles and how many views it would get.</p>
+                <p>Note : Each article with more than 50 fifty words will be provided with a separate page by default.
+                After you have reached 75 contributions you will have to provide the necessary payment details to transact the income to you from our side.</p>
+            </div>
+           <div id="id-8450234-jhihj234-234234">
+            {% if logged_in %}
+            <a href="/news/write">
+              <button class="cl-454352-dm-g" id="id-8450234-jhihj234-234234-btn">Start Writing</button>
+            </a>
+            {% endif %}
+            {% if not logged_in %}
+            <a href="/login?to=earninfo">
+              <button class="cl-454352-dm-g" id="id-8450234-jhihj234-234234-btn">Start earning by signing in</button>
+            </a>
+            {% endif %}
+           </div>
+        </div>
+    </div>
+</div>
+    <!-- End Main Area -->
+{% endblock %}
