@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="id-0532-y-m">
+       <div id="id-0532-y-m-01-04">
+         <div>
+            {{response.username}}
+         </div>
+         <div>
+            {% if response.contributions > 74 %}
+            Member
+            {% endif %}
+         </div>
+         <div>
+            Contributions <span>'{{response.contributions}}'
+         </div>
+        </div>
+        <div id="id-0532-y-m-01-03">
+            <div id="id-34098aa_">
+                <div id="id-3a_">{{response.username}}'s badges</div>
+                <div id="id-080s-" style="border-right:3px solid e7e7e7">
+                    <div id="id-ba-803">
+                        <div id="id-ba-80-01">
+                            <div id="id-ba-80-01-01" style="background:gray">C</div>
+                        </div>
+                        <div id="id-ba-80-02">
+                            Contributor
+                        </div>
+                    </div>
+                    {% if response.contributions > 74 %} 
+                    <div id="id-ba-804">
+                        <div id="id-ba-80-01">
+                            <div id="id-ba-80-01-01" style="background:#f2f27c">W</div>
+                        </div>
+                        <div id="id-ba-80-02">
+                            Writer
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if response.contributions > 200 %}
+                    <div id="id-ba-805">
+                        <div id="id-ba-80-01">
+                            <div id="id-ba-80-01-01" style="background:#b350b3">E</div>
+                        </div>
+                        <div id="id-ba-80-02">
+                            Editor
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if response.contributions > 500 %}
+                    <div id="id-ba-806">
+                        <div id="id-ba-80-01">
+                            <div id="id-ba-80-01-01" style="background:#f64e4e">P</div>
+                        </div>
+                        <div id="id-ba-80-02">
+                            Publisher
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div id="id--80ddfs">
+                <div id="id-80f">Current</div>
+                <div id="id-080s-">
+                    <div id="id-ba-803-">
+                        {% if response.contributions < 75 %}
+                        <div id="id-ba-80-01-">
+                            <div id="id-ba-80-01-01-" style="background:gray;">C</div>
+                        </div>
+                        <div id="id-ba-80-02-">
+                            Contributor
+                        </div>
+                        {% endif %}
+                        {% if response.contributions > 74 and response.contributions < 200 %}
+                        <div id="id-ba-80-01-">
+                            <div id="id-ba-80-01-01-" style="background:#f2f27c">W</div>
+                        </div>
+                        <div id="id-ba-80-02-">
+                            Writer
+                        </div>
+                        {% endif %}
+                        {% if response.contributions > 199 and response.contributions < 500 %}
+                        <div id="id-ba-80-01-">
+                            <div id="id-ba-80-01-01-" style="background:#b350b3">E</div>
+                        </div>
+                        <div id="id-ba-80-02-">
+                            Editor
+                        </div>
+                        {% endif %}
+                        {% if response.contributions > 499 and response.contributions < 800 %}
+                        <div id="id-ba-80-01-">
+                            <div id="id-ba-80-01-01-" style="background:#f64e4e">P</div>
+                        </div>
+                        <div id="id-ba-80-02-">
+                            Publisher
+                        </div>
+                        {% endif %}
+                        {% if response.contributions > 799 %}
+                        <!--<div id="id-ba-80-01-">
+                            <div id="id-ba-80-01-01-"></div>
+                        </div>
+                        <div id="id-ba-80-02-">
+                            Publisher
+                        </div>-->
+                        {% endif %}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="id-0532-y-m-01-04">
+            <div id="id-80445-dfs">
+                 News Posts
+            </div>
+            <div id="id-3340sfs-">
+                 Blog Posts
+            </div>
+            <div id="id-374088a0sf-">
+                <div id="id-3423-vf">
+                    {% for i in newsposts %}
+                    <a href="/news/read/view/{{i.heading_url}}"><div id="id-34-ds">
+                        {{i.heading}}  
+                    </div></a>
+                    {% endfor %}
+                </div>
+                <div id="id-342234-fv">
+                    {% for i in blogposts %}
+                    <a href="/blog/read/view/{{i.heading_url}}"><div id="id-34-ds">
+                        {{i.heading}}
+                    </div></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

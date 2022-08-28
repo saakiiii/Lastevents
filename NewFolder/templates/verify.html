@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Main Area -->
+    <div id="id-1234-3032">
+       <form id="___23-34KFLjafasujiibafi" action="/verify" method="post" data-element="id-1234-3032-06-01-btn">
+        <div id="id-1234-3032-01">
+            <h2>Verify</h2>
+            <h3>{{alert}}</h3>
+        </div>
+        <div id="id-1234-3032-03">
+            <div id="id-42234-234-32423433-23">
+                <div id="id-1234-3032-03-01">
+                    <p>The verification code has been sent to your email({{email}}) successfully</p>
+                </div>
+            </div>
+        </div>
+        <div id="id-1234-3032-03">
+            <div id="id-42234-234-32423433-23">
+                <div id="id-1234-3032-03-01">
+                    <input type="text" id="id-1234-3032-01-01-in-01" placeholder="Code" name="code" required>
+                </div>
+            </div>
+        </div>
+        <div id="id-1234-3032-06">
+            <div id="id-1234-3032-06-01">
+                <button type="submit" id="id-1234-3032-06-01-btn">Verify</button>
+            </div>
+            <div style="padding-top:10px">
+                <a href="/home">Skip now</a>
+            </div>
+        </div>
+       </endform>
+    </div>
+<style>
+    .c-b-s{
+        border: 2px solid #339952;
+        padding: 10px 50px;
+        background: transparent;
+        border-radius: 20px;
+        font-size: 20px;
+    }
+    body{
+        background: #339952;
+    }
+
+    input{
+        height: 50px;
+        outline: none;
+        border-radius: 10px;
+        border: 1px solid #339952;
+        width: 60%;
+        padding-left: 20px;
+    }
+
+    #id-1234-3032-02{
+        padding: 30px 0;
+    }
+
+    #id-1234-3032-03{
+        padding: 0px 0px 10px 0px;
+    }
+
+    #id-1234-3032{
+        margin: auto;
+        margin-top: 10pc;
+        width: 40%;
+        background: white;
+        text-align: center;
+        box-shadow: 0px 0px 8px 2px #666963;
+    padding: 40px 0;
+    }
+
+    #id-s-to{
+        background: #ebebeb;
+    }
+
+    #id-1234-3032-06-01{
+         padding: 20px 0px;
+    }
+
+    nav{
+        visibility: collapse;
+    }
+   @media screen and (max-width:900px){
+    #id-1234-3032{
+        width: 95%;
+    }
+   }
+</style>
+    <!-- End Main Area -->
+{% endblock %}

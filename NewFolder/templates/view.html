@@ -1,0 +1,446 @@
+   {% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+  body{
+    background: none;
+  }
+  #_02-aod{
+    width: 100%;
+    left: 0px;
+    top: 50px;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+#_02-few{
+ cursor: pointer;
+}
+
+#_02-adf{
+  width: 60%;
+/*   background: white; */
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+}
+
+
+#i-au-p{
+  padding: 10px;
+ background: #339952;
+ width: fit-content;
+ color: white;
+}
+
+#i-co-4{
+ margin: auto;
+ margin-top: 50px;
+ padding: 20px 0;
+ padding: 30px 0;
+ font-size: 24px;
+ font-family: verdana;
+/*   text-decoration: underline; */
+}
+
+.c-f-a-fs{
+ font-size: 15px;
+ font-family: verdana;
+}
+
+#i-au-pr{
+ padding-bottom: 20px;
+ padding-right: 20px;
+ padding-left: 10px;
+ padding-top: 20px;
+}
+
+.c-f-d{
+ font-size: 20px;
+ font-family: verdana;
+}
+
+#i-c-m {
+  position: relative;
+  width: 50%;
+  margin: auto;
+}
+
+#i-ww-{
+ width: 100%;
+ height: 48px;
+ padding: 3px;
+ outline: none;
+ width: 70%;
+ border: none;
+ box-shadow: -11px 0px 43px -21px;
+ border-radius: 12px;
+}
+
+.c-v-wi{
+  width: 58%;
+  margin: auto;
+}
+
+.c-s-n-b{
+ background: #337ab7;
+ padding: 3px;
+ color: white;
+ border-radius: 3px;
+ width: 29%;
+ text-align: center;
+ padding: 12px 0px;
+ cursor: pointer;
+}
+
+.c-i-b-c{
+ display: inline-block;
+}
+
+#i-co-m {
+  /* height: 100px; */
+  /* background: blue; */
+  /* margin: auto; */
+  box-shadow: 0px 0px 10px 1px #bfbfbf;
+  position: relative;
+  /* margin-top: 50px; */
+  border-radius: 11px;
+  width: 50%;
+  margin-top: 14px;
+  background: white;
+}
+
+#i-f-a_{
+  padding: 30px 0px;
+}
+
+#_02-avb{
+ width: 95%;
+ padding: 5px;
+ text-align: center;
+ background: black;
+ color: white;
+ position: sticky;
+ left: -50px;
+ border-bottom-right-radius: 20px;
+ box-shadow: 0px -7px 13px 0px #b9b9b9;
+}
+
+#_02-avo{
+  padding: 30px;
+  background: white;
+  margin-left: 30px;
+  margin-top: -70px;
+  padding-top: 100px;
+  box-shadow: 0px 0px 30px -15px;
+}
+
+#_02-oni{
+  background: #060404;
+  padding: 0 10px;
+  padding-bottom: 10px;
+/*   height: 100px; */
+  margin: auto;
+  width: 15%;
+  right: 20px;
+  top: 50px;
+  color: white;
+  font-size: 18px;
+  overflow-x: scroll;
+  box-shadow: 0px 0px 5px 2px black;
+}
+
+#_02-oni::-webkit-scrollbar
+{
+/*     width: 2px; */
+    height: 3px;
+    background: #060405;
+  }
+
+._02-iss{
+  padding-top: 10px;
+/*   padding-bottom: 5px; */
+}
+
+._02-ain{
+  font-size: 24px;
+  line-height: 30px;
+}
+
+._02-nva{
+  font-size: 36px;
+}
+
+@media screen and (max-width:900px){
+  #_02-avo{
+/*     padding-left: 10px; */
+/*     padding-right: 10px; */
+    width: 95%;
+    margin-left: 0%;
+  }
+  ._02-nva{
+    font-size: 30px;
+  }
+  #_02-adf{
+    width: 95%;
+  }
+  #_02-oni{
+     position: static;
+     margin: auto;
+     margin-top: 50px;
+     width: fit-content;
+  }
+  .c-v-wi{
+    width: 95%;
+  }
+  #i-co-m{
+      width: 95%;
+  }
+  #i-c-m{
+      width: 95%;
+  }
+}
+
+</style>
+
+<div id='i-co-01'>
+    <div class="c-t-ad-n-r">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7237681015099481"
+      crossorigin="anonymous"></script>
+ <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-7237681015099481"
+      data-ad-slot="5421472510"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+ <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+ </script>
+ <div id="_02-aod">
+  <div id="_02-oni">
+    <div class="_02-iss">{{response.author}}</div>
+    <div class="_02-iss">{{response.date}}</div>
+    {% if response.time_ago != None %}
+    <div class="_02-iss">{{response.time_ago}}</div>
+    {% endif %}
+    {% if news %}
+    <div class="_02-iss" id="_02-few" data-id="/{{response.heading_url}}/news/12087">Report</div>
+    {% endif %}
+    {% if blog %}
+    <div class="_02-iss" id="_02-few" data-id="/{{response.heading_url}}/blog/12087">Report</div>
+    {% endif %}
+  </div>
+  <div id="_02-adf">
+    <div id="_02-avb"><h1 class="_02-nva">{{response.heading}}</h1></div>
+    <div class="_02-ain" id="_02-avo">
+      {% if news %}
+        {{response.news|safe}}
+      {% endif %}
+      {% if blog %}
+        {{response.blog|safe}}
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+
+  <div class="c-v-wi" id="i-co-4">
+    Comments</span>
+  </div>
+  <div id="i-c-m">
+    <input id="i-ww-" class="c-i-b-c" type="" placeholder="Add comment here">
+    <a class="c-s-n-b c-i-b-c" id="i-c-s-" href="/create/user/comment/{{response.heading_url}}" data-element="i-ww-" style="color:white; text-decoration:underline;">Send</a>
+  </div>
+  <div id='i-f-a_'>
+  {% for i in comments %}
+  <div class="c-v-wi" id="i-co-m">
+    <div class="c-f-a-fs" id="i-au-p">{{i.author}}, <span>{{i.date}}</span></div>
+    <div class="c-f-d" id="i-au-pr">
+          {{i.comment}}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+  {% if news %}
+  <div class="c-v-wi" id="i-01_re">
+ <!--   {% for i in data %}
+  <div id="id-6876v-b858b76n98n79885">
+      <div id="id-96987c76-69v8769875">
+          {% if i.can_display_une == "1" %}
+          {{i.author}}
+          {% endif %}
+      </div>
+      <div id="id-qwer0q9wer-4234i234i">
+          <div id="id-3420-adf9s">{{i.date}}</div>
+          {% if i.time_ago != None %}
+          <div  id="id-3420-adf9s-0">{{i.time_ago}}</div>
+          {% endif %}
+      </div>
+      {% if i.tbnail != None %}
+      <div id="id-3249a0df0af09a3-234">
+
+         <img id="id-845-sdf8a7d9" src="{{i.tbnail}}" alt="loading">
+
+      </div>
+      {% endif %}
+      <div id="id-340239842-asfasdf3234">
+            <a href="/news/read/view/{{i.heading_url}}">{{i.heading}}</a>
+      </div>
+
+
+      <div id="id-42038424-fds8f9a73424-4234">
+         <div id="id-96987c76-69v876987532">
+             {{i.category}}
+        </div>
+         <div id="id-96987c76-69v876987532">
+          {{i.country}}
+         </div>
+         <div id="id-96987c76-69v876987532">
+            {{i.state}}
+        </div>
+      </div>
+
+      <div id="id-340239842-asfasdf3235">
+             <div id="id-sh-96h_saf--ads8f0">
+                          <a title="Tweet" target="_blank" href="http://twitter.com/intent/tweet?text={{i.heading}}&url=https://www.lastevents.space/news/read/view/{{i.heading_url}}" rel="nofollow noopener">
+                            <div id="id-sh-btn-asssf">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zm-59.942 195.935a161.34 161.34 0 0 1-47.079 12.85c16.914-10.086 29.894-26.22 36.095-45.413-15.862 9.39-33.473 16.287-52.087 19.96-15.048-15.92-36.343-25.83-59.942-25.83-45.331 0-82.04 36.685-82.04 82.016 0 6.355.685 12.626 2.09 18.674-68.186-3.484-128.647-36.13-169.148-85.785a82.08 82.08 0 0 0-11.126 41.245c0 28.465 14.457 53.623 36.485 68.257-13.465-.39-26.068-4.11-37.206-10.205v1.04c0 39.756 28.3 72.969 65.86 80.48a82.817 82.817 0 0 1-21.627 2.883c-5.291 0-10.405-.52-15.472-1.477 10.453 32.587 40.713 56.351 76.642 57-28.134 22.04-63.473 35.163-101.954 35.163-6.65 0-13.134-.39-19.606-1.146 36.39 23.362 79.524 36.85 125.872 36.85 150.935 0 233.507-125.056 233.507-233.494 0-3.603-.06-7.122-.236-10.654 16.027-11.457 29.965-25.937 40.925-42.378l.048-.036z"/></svg>
+                            </div>
+                          </a>
+                          <a title="Whatsapp" target="_blank" href="https://api.whatsapp.com/send?text={{i.heading}} https://www.lastevents.space/news/read/view/{{i.heading_url}}" rel="nofollow noopener">
+                          <div  id="id-sh-btn-asssf">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zM473.143 165.876c-40.666-40.748-94.726-63.166-152.34-63.166-118.655 0-215.223 96.592-215.223 215.329 0 37.95 9.921 75.036 28.772 107.647l-30.59 111.604 114.178-29.93c31.489 17.138 66.887 26.21 102.863 26.21h.071c118.667 0 215.353-96.604 215.353-215.319 0-57.579-22.394-111.639-63.084-152.364v-.011zm-152.27 331.362c-32.185 0-63.662-8.67-91.135-24.98l-6.555-3.898-67.76 17.776 18.094-66.06-4.217-6.792c-18.06-28.43-27.425-61.347-27.425-95.221 0-98.706 80.28-179.057 179.093-179.057 47.776 0 92.812 18.697 126.58 52.477 33.744 33.827 52.359 78.768 52.359 126.639-.095 98.788-80.399 179.093-179.034 179.093v.023zm98.139-134.116c-5.339-2.705-31.831-15.65-36.756-17.469-4.89-1.842-8.516-2.752-12.166 2.693-3.52 5.363-13.878 17.54-17.032 21.154-3.141 3.555-6.26 4.04-11.61 1.347-5.374-2.693-22.784-8.41-43.312-26.717-15.98-14.292-26.787-31.938-29.953-37.288-3.177-5.315-.342-8.339 2.386-10.926 2.48-2.41 5.374-6.295 8.09-9.437 2.73-3.141 3.556-5.338 5.351-9 1.772-3.543.898-6.673-.449-9.413-1.346-2.693-12.153-29.221-16.523-39.993-4.335-10.524-8.823-9.06-12.142-9.272-3.166-.13-6.697-.13-10.288-.13-3.543 0-9.378 1.335-14.35 6.733-4.926 5.327-18.827 18.378-18.827 44.87 0 26.493 19.228 52.04 21.957 55.69 2.74 3.567 37.96 57.957 91.926 81.26 12.839 5.493 22.855 8.8 30.638 11.328 12.922 4.11 24.615 3.508 33.886 2.138 10.323-1.524 31.82-12.98 36.32-25.572 4.523-12.579 4.523-23.303 3.153-25.535-1.287-2.398-4.819-3.697-10.287-6.473l-.012.012z"/></svg>
+                          </div>
+                          </a>
+                          <a  title="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.lastevents.space/news/read/view/{{i.heading_url}}" rel="nofollow noopener">
+                              <div id="id-sh-btn-asssf">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm186 1117h311V744h-311c-240 0-435 195-435 435v186h-249v373h249v994h373v-994h311l62-373h-373v-186c0-34 28-62 62-62z"/></svg>
+                              </div>
+                          </a>
+            </div>
+      </div>
+</div>
+{% if data.index(i) == 4 or data.index(i) == 6 %}
+<div class="c-t-ad-n-r c-m-no-_">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7237681015099481"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7237681015099481"
+     data-ad-slot="5628258597"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{% endif %}
+{% endfor %}-->
+    </div>
+
+{% endif %}
+
+
+<script>
+
+</script>
+
+{% if news %}
+<script>
+  $.ajax({
+    type:'POST',
+    url:`/ana/a42/us4/{{news_id}}`,
+    data:JSON.stringify(),
+    contentType:"application/json",
+    dataType:'json',
+    success:function(response){
+      resp = response.response;
+      ps30 = resp;
+      parw0q8 = document.getElementById("i-01_re");
+      for(n = 0;n < resp.length; n++){
+      i = resp[n];
+      ufpem = i.can_display_une;
+      timaf = i.time_ago;
+      tbnail = i.tbnail;
+      if(ufpem == '1'){
+          ufpem = i.author;
+      }else if(ufpem == '0'){
+          ufpem = "";
+      }if(timaf == null){
+          timaf = ""
+      }else{
+          timaf = i.time_ago ;
+      }if(tbnail == null){
+        tbnail = "";
+      }else{
+        tbnail = i.tbnail;
+      }
+      dafo = ``
+    ldfa = document.createElement("div");
+    ldfa.innerHTML = dafo;
+    parw0q8.appendChild(ldfa);
+    }
+  }
+})
+</script>
+{% endif %}
+
+{% if blog %}
+<script>
+
+</script>
+{% endif %}
+
+<script>
+  document.addEventListener("click", (e)=>{
+    if(e.target.id == "_02-few"){
+      $.ajax({
+        type:'POST',
+        url:`${e.target.dataset.id}`,
+        data:JSON.stringify({}),
+        contentType:"application/json",
+        dataType:'json',
+        success:function(response){
+            if(response.response == true){
+             alert("Report added successfully");
+            }else{
+              alert("You already reported this article");
+            }
+        }
+      })
+    }
+    if(e.target.id == "i-c-s-"){
+       e.preventDefault();
+       vw80f = document.getElementById(e.target.dataset.element);
+       cmt = vw80f.value;
+       vw80f.value = "";
+       if(cmt.length > 0){
+       $.ajax({
+        type:'POST',
+        url:`${e.target.href}`,
+        data:JSON.stringify({comment:cmt}),
+        contentType:"application/json",
+        dataType:'json',
+        success:function(response){
+          vrwp = document.getElementById("i-f-a_");
+          vadf = document.createElement("div");
+          vadf.setAttribute("class", "c-v-wi");
+          vadf.setAttribute("id", "i-co-m");
+          cmt = `
+            <div class="c-f-a-fs" id="i-au-p">${response.author}, <span>${response.date}</span></div>
+            <div class="c-f-d" id="i-au-pr">
+                  ${response.comment}
+            </div>
+          `
+          vadf.innerHTML = cmt;
+          vrwp.appendChild(vadf);
+        }
+       })
+      }else{
+      }
+    }
+  })
+</script>
+{% endblock %}

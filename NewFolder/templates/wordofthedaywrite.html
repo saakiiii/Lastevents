@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+    
+{% block content %}
+
+    <!-- Main Area -->
+    <div class="cl-4203840-ufsadfu" id="id-4234-w">
+        {% if value %}
+           <div id="id-4234-w-01">
+            <a href="/news/write">
+                <div id="id-342342-23424234-234234">
+                   Write News Article
+                </div>
+            </a>
+            <a href="/blog/write">
+                <div id="id-342342-23424234-234234">
+                    Write Blog Article
+                </div>
+            </a>
+            <a href="/wofday/write">
+                <div id="id-342342-23424234-234234" style="background:#339952; color:white">
+                    Write Today word
+                </div>
+            </a>    
+        </div>
+            <hr>
+        <form id="___23-34KFLjafasujiibafi" action="/new/word/today/write" method="post" data-element="id-4234-w-01-03-btn"> 
+            <div id="id-4234-w-01-02-3543" style="width: 98%; margin: auto; padding-bottom:20px;">
+                <textarea class="cl-4234-w-01-02-01-fss-" id="id-4234-w-01-02-01-fss-" placeholder="Word"  style='{{wordalert}}' rows="1" name="word" required></textarea>
+            </div>
+            <div id="id-4234-w-01-02-3543" style="width: 98%; margin: auto; padding-bottom:20px;">
+                <textarea class="cl-4234-w-01-02-01-fss-" id="id-4234-w-01-02-01-fss-xAxi" placeholder="Meaning"  style='{{meaningalert}}' name="meaning" required></textarea>
+            </div>
+
+            <div id="id-4234-w-01-03">
+                <button type="submit" id="id-4234-w-01-03-btn">Publish</button>
+            </div>
+        </form>
+        {% endif %}
+        {% if not value %}
+          <div style="text-align:center"> 
+            <h3>Today's word of the day stack is full. You can write here next day.</h3>
+            <a href="/wordmean">See today's word</a>
+          </div>
+            {% endif %}
+    </div>
+    <!-- End Main Area -->
+{% endblock %}

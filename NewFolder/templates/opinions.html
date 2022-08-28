@@ -1,0 +1,549 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  body{
+    overflow-x: hidden;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  ._07-por{
+    width: 100%;
+  }
+
+  #i-add-pst- {
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    font-size: 60px;
+    padding-right: 20px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 52px;
+    width: fit-content;
+    position: fixed;
+    box-shadow: 0px 0px 24px 3px #b0b0b0;
+    bottom: 100px;
+    right: 1%;
+    cursor: pointer;
+  }
+
+  ._07-jri{
+    background: white;
+    margin: auto;
+    margin-top: 70px;
+    padding: 20px 0px;
+    border-radius: 5px;
+  /*   border: 1px solid; */
+    box-shadow: 0px 0px 25px -4px #b0b0b0;
+  }
+
+  ._07-umc{
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  ._07-yut{
+    width: 600px;
+    border-radius: 15px;
+    margin: auto;
+    overflow: hidden;
+  /*   box-shadow: 0px 0px 12px 5px #a1a1a1; */
+        box-shadow: 0px 0px 7px 1px #a1a1a1;
+  }
+
+  ._07-bri{
+    padding-bottom: 20px;
+    padding-left: 25px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  #i-r-op-me{
+     width: 42%;
+     margin: auto;
+  }
+
+  ._07-iew{
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+  }
+  ._19-cox{
+    display: none;
+    width: 100px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 0px 10px 1px #cccccc;
+    padding: 8px 8px 5px 8px;
+    border-radius: 5px;
+    position: absolute;
+    right: -30px;
+    top: -26px;
+  }
+
+  ._19-vmo{
+    display: inline-grid;
+    width: 30%;
+  }
+
+  ._19-vmo a{
+
+  }
+  ._07-pwq{
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    position: relative;
+  }
+
+  ._07-pwq span{
+    font-size: 30px;
+    cursor: pointer;
+  }
+  body{
+  }
+
+  #_12-vaz{
+    z-index: 5px;
+    scale: 0;
+    transition: 0.01s cubic-bezier(0.41, -0.06, 0, 0.87);
+  }
+
+  ._12-vaz{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #0000008f;
+  }
+
+  ._12-ija{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  ._12-ija span{
+    cursor: pointer;
+  }
+
+  ._12-ovi{
+    position: relative;
+    background: #ffffffc9;
+  /*   height: 200px; */
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 0px 16px 0px;
+    transition: 0.5s cubic-bezier(0.24, 0.92, 0.46, 1.12);
+  }
+
+  #_12-ov1{
+    margin-left: -400px;
+  }
+
+  ._12-mnr{
+    padding: 10px 5px 25px 5px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  ._12-poe{
+    margin: auto;
+    border-radius: 5px;
+  /*   border: 1px solid white; */
+    width: fit-content;
+    padding: 10px 20px;
+    color: black;
+    background: white;
+    position: relative;
+    scale: 0;
+  /*   animation-name: load; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  ._12-vpz{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #1616161c;
+    animation-name: load;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  ._12-vao{
+     text-align: center;
+      padding-top: 30px;
+  }
+
+  /* @keyframes load{
+    from{background: white;}
+    to{background: red;}
+  } */
+
+  <!--@keyframes load{
+    0%{left: 0%;}
+    20%{left: 20%;}
+    40%{left: 40%;}
+    60%{left: 60%;}
+    80%{left: 80%;}
+  }-->
+
+
+  @keyframes load{
+    0%{left: 0%;}
+    50%{left: 80%}
+    100%{left: 0%;}
+  }
+
+  ._12-vao span{
+    font-size: 40px;
+  }
+
+  ._09-vco{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+    ._pr-lo2{
+      border: 10px solid black;
+      border-top: 10px solid transparent;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      animation-name: pre43;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    @keyframes pre43{
+      00%{transform:rotate(0deg);}
+      100%{transform:rotate(360deg);}
+    }
+
+    ._05-hin{
+          margin-top: 20pc;
+    }
+
+  ._12-vne{
+     text-align: center;
+     padding: 0px 0px 20px 0px;
+  }
+
+  ._12-mnq{
+     padding: 7px;
+     font-size: 20px;
+     background: #339952;
+     color: white;
+     outline: none;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+  }
+
+  #_12-ov2{
+    margin: auto;
+    scale: 1;
+  }
+
+  @media screen and (max-width:900px){
+    #i-r-op-me{
+      width: 96%;
+    }
+    ._07-jri{
+      width: 100%;
+      margin: auto;
+      margin-top: 60px;
+    }
+    #i-add-pst-{
+      font-size: 45px;
+      padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+    ._07-yut{
+      width: 95%;
+    }
+  }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div class="c-s-ad-o">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7237681015099481" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7237681015099481"
+     data-ad-slot="4555291013"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{% if c %}
+<div class="_12-ovi" id="_12-ov1">
+  <div class="_12-ija"><span class="material-symbols-outlined" id="_12-pix">
+close
+</span></div>
+  <div class="_12-vao"><span class="material-symbols-outlined">
+done
+</span></div>
+  <div class="_12-mnr">
+    Your last post has been uploaded successfully
+  </div>
+  <div class="_12-vne" id="_12-vne"><button class="_12-mnq" id="_12-paz">View post</button></div>
+</div>
+{% endif %}
+<div id='i-r-op-me'>
+  <div class="_09-vco">
+    <div class="_pr-lo2">
+
+    </div>
+  </div>
+<!--{% for i in opis %}
+<div class="c-m-f">
+  <div class="c-d-au-c c-v-wi">
+  <div class="c-d-au- c-b-x">
+    <div>{{i.username}}</div>
+    <div><a href="/ge/{{i.pagename}}">{{i.pagename}}</a></div>
+    <div>{{i.date}}</div>
+  </div>
+   </div>
+  <div class="c-d-au-m c-v-wi">
+    <img id="i-m-" src='{{i.image}}'>
+  </div>
+
+  <div class="c-v-wi" id="i-vh-4490">
+    <div class="c-t-pt">
+      {{i.text}}
+    </div>
+  <div class="c-bo-cr">
+    <div class="c-i-ns">
+       <div id="i-t-0932-{{opis.index(i)+10}}" class="c-f-l" data-element="{{i.valuable}}">{{i.valuable}}</div>
+     <span id="i-t-0932" class="material-symbols-outlined" data-id="{{i.post_id}}" data-element="i-t-0932-{{opis.index(i)+10}}">
+done_outline
+</span>
+    </div>
+</div>
+
+  </div>
+  </div>
+</div>
+
+{% if opis.index(i) % 4 == 0 and opis.index(i) < 20 %}
+<div class="c-t-ad-n-r">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7237681015099481"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7237681015099481"
+     data-ad-slot="2312271053"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{% endif %}
+{% endfor %}-->
+</div>
+
+<!--<div title="New post" id="i-add-pst-">
+    <a href="/create/opi" style="text-decoration:none">+</a>
+</div>-->
+
+<div title="New post" id="i-add-pst-">
+  <a href="/create/opi" style="text-decoration:none">+</a>
+</div>
+
+<script>
+  ps30 = [];
+  rodf = 0;
+  vauro = 3;
+  $.ajax({
+    type:'POST',
+    url:`/opm/a42/us4`,
+    data:JSON.stringify(),
+    contentType:"application/json",
+    dataType:'json',
+    success:function(response){
+      resp = response.response;
+      ps30 = resp;
+      parw0q8 = document.getElementById("i-r-op-me");
+      parw0q8.innerHTML = "";
+      for(i = 0;i < vauro; i++){
+      n = resp[i];
+      vaopq = "";
+      if(n.text.length > 0){
+                vaopq = `<div class="_07-umc">${n.text}</div>`
+      }
+      dafo = `
+      <div class="_07-jri">
+        <div class="_07-bri">
+          ${n.username}
+          , ${n.pagename}
+        </div>
+      <div class="_07-yut">
+        <img class="_07-por" src="${n.image}">
+        ${vaopq}
+      </div>
+        <div class="_07-iew">
+          <div class="_07-pwq">
+            <div style='font-weight: bolder;font-size: 20px;' id="_07-cxt-${i+10}" data-element="${n.valuable}">${n.valuable}</div>
+
+                  <span class="material-symbols-outlined" id="_07-cxt" data-id="${n.post_id}" data-element="_07-cxt-${i+10}">
+            check_box
+            </span></div>
+          <div class="_07-pwq" id="_07-xxz"><span id="_07-mxm" class="material-symbols-outlined" data-element="_07-cox-${i+10}">
+      share
+      </span>
+      <div class="_19-cox" id="_07-cox-${i+10}" data-element="true">
+        <div class="_19-vmo">
+               <a title="Tweet" target="_blank" href="https://twitter.com/intent/tweet?text=${n.text}&amp;url=${n.image}" rel="nofollow noopener">
+      <div id="id-sh-btn-asssf">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zm-59.942 195.935a161.34 161.34 0 0 1-47.079 12.85c16.914-10.086 29.894-26.22 36.095-45.413-15.862 9.39-33.473 16.287-52.087 19.96-15.048-15.92-36.343-25.83-59.942-25.83-45.331 0-82.04 36.685-82.04 82.016 0 6.355.685 12.626 2.09 18.674-68.186-3.484-128.647-36.13-169.148-85.785a82.08 82.08 0 0 0-11.126 41.245c0 28.465 14.457 53.623 36.485 68.257-13.465-.39-26.068-4.11-37.206-10.205v1.04c0 39.756 28.3 72.969 65.86 80.48a82.817 82.817 0 0 1-21.627 2.883c-5.291 0-10.405-.52-15.472-1.477 10.453 32.587 40.713 56.351 76.642 57-28.134 22.04-63.473 35.163-101.954 35.163-6.65 0-13.134-.39-19.606-1.146 36.39 23.362 79.524 36.85 125.872 36.85 150.935 0 233.507-125.056 233.507-233.494 0-3.603-.06-7.122-.236-10.654 16.027-11.457 29.965-25.937 40.925-42.378l.048-.036z"></path></svg>
+      </div>
+      </a>
+        </div>
+        <div class="_19-vmo"><a title="Whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=${n.text} ${n.image}" rel="nofollow noopener">
+      <div id="id-sh-btn-asssf">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zM473.143 165.876c-40.666-40.748-94.726-63.166-152.34-63.166-118.655 0-215.223 96.592-215.223 215.329 0 37.95 9.921 75.036 28.772 107.647l-30.59 111.604 114.178-29.93c31.489 17.138 66.887 26.21 102.863 26.21h.071c118.667 0 215.353-96.604 215.353-215.319 0-57.579-22.394-111.639-63.084-152.364v-.011zm-152.27 331.362c-32.185 0-63.662-8.67-91.135-24.98l-6.555-3.898-67.76 17.776 18.094-66.06-4.217-6.792c-18.06-28.43-27.425-61.347-27.425-95.221 0-98.706 80.28-179.057 179.093-179.057 47.776 0 92.812 18.697 126.58 52.477 33.744 33.827 52.359 78.768 52.359 126.639-.095 98.788-80.399 179.093-179.034 179.093v.023zm98.139-134.116c-5.339-2.705-31.831-15.65-36.756-17.469-4.89-1.842-8.516-2.752-12.166 2.693-3.52 5.363-13.878 17.54-17.032 21.154-3.141 3.555-6.26 4.04-11.61 1.347-5.374-2.693-22.784-8.41-43.312-26.717-15.98-14.292-26.787-31.938-29.953-37.288-3.177-5.315-.342-8.339 2.386-10.926 2.48-2.41 5.374-6.295 8.09-9.437 2.73-3.141 3.556-5.338 5.351-9 1.772-3.543.898-6.673-.449-9.413-1.346-2.693-12.153-29.221-16.523-39.993-4.335-10.524-8.823-9.06-12.142-9.272-3.166-.13-6.697-.13-10.288-.13-3.543 0-9.378 1.335-14.35 6.733-4.926 5.327-18.827 18.378-18.827 44.87 0 26.493 19.228 52.04 21.957 55.69 2.74 3.567 37.96 57.957 91.926 81.26 12.839 5.493 22.855 8.8 30.638 11.328 12.922 4.11 24.615 3.508 33.886 2.138 10.323-1.524 31.82-12.98 36.32-25.572 4.523-12.579 4.523-23.303 3.153-25.535-1.287-2.398-4.819-3.697-10.287-6.473l-.012.012z"></path></svg>
+      </div>
+      </a></div>
+        <div class="_19-vmo"><a title="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=${n.image}" rel="nofollow noopener">
+      <div id="id-sh-btn-asssf">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm186 1117h311V744h-311c-240 0-435 195-435 435v186h-249v373h249v994h373v-994h311l62-373h-373v-186c0-34 28-62 62-62z"></path></svg>
+      </div>
+      </a></div>
+      </div>
+    </div>
+        </div>
+      </div>`
+    ldfa = document.createElement("div");
+    ldfa.innerHTML = dafo;
+    parw0q8.appendChild(ldfa);
+  }
+  rodf = vauro;
+  }
+})
+{% if c == 'aKIva' %}
+
+va3 = document.getElementById("_12-ov1");
+va3.style.marginLeft = "inherit";
+
+{% endif %}
+v342 = 0;
+    document.addEventListener("scroll", ()=>{
+      if(pageYOffset > (document.body.offsetHeight-1000) && v342 == 0)
+      {
+        v342 = 1;
+            for(i = rodf;i < rodf+vauro; i++){
+              n = ps30[i];
+              vaopq = "";
+              if(n.text.length > 0){
+                vaopq = `<div class="_07-umc">${n.text}</div>`
+              }
+              dafo = `
+            <div class="_07-jri">
+              <div class="_07-bri">
+                ${n.username}
+                , ${n.pagename}
+              </div>
+            <div class="_07-yut">
+              <img class="_07-por" src="${n.image}">
+              ${vaopq}
+            </div>
+              <div class="_07-iew">
+                <div class="_07-pwq">
+            <div style='font-weight: bolder;font-size: 20px;' id="_07-cxt-${i+10}" data-element="${n.valuable}">${n.valuable}</div>
+
+                  <span class="material-symbols-outlined" id="_07-cxt" data-id="${n.post_id}" data-element="_07-cxt-${i+10}">
+            check_box
+            </span></div>
+
+                <div class="_07-pwq"><span id="_07-mxm" class="material-symbols-outlined" data-element="_07-cox-${i+10}">
+            share
+            </span>
+            <div class="_19-cox" id="_07-cox-${i+10}" data-element="true">
+              <div class="_19-vmo">
+                     <a title="Tweet" target="_blank" href="https://twitter.com/intent/tweet?text=20 best inspirational quotes&amp;url=${n.image}" rel="nofollow noopener">
+            <div id="id-sh-btn-asssf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zm-59.942 195.935a161.34 161.34 0 0 1-47.079 12.85c16.914-10.086 29.894-26.22 36.095-45.413-15.862 9.39-33.473 16.287-52.087 19.96-15.048-15.92-36.343-25.83-59.942-25.83-45.331 0-82.04 36.685-82.04 82.016 0 6.355.685 12.626 2.09 18.674-68.186-3.484-128.647-36.13-169.148-85.785a82.08 82.08 0 0 0-11.126 41.245c0 28.465 14.457 53.623 36.485 68.257-13.465-.39-26.068-4.11-37.206-10.205v1.04c0 39.756 28.3 72.969 65.86 80.48a82.817 82.817 0 0 1-21.627 2.883c-5.291 0-10.405-.52-15.472-1.477 10.453 32.587 40.713 56.351 76.642 57-28.134 22.04-63.473 35.163-101.954 35.163-6.65 0-13.134-.39-19.606-1.146 36.39 23.362 79.524 36.85 125.872 36.85 150.935 0 233.507-125.056 233.507-233.494 0-3.603-.06-7.122-.236-10.654 16.027-11.457 29.965-25.937 40.925-42.378l.048-.036z"></path></svg>
+            </div>
+            </a>
+              </div>
+              <div class="_19-vmo"><a title="Whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=${n.text} ${n.image}" rel="nofollow noopener">
+            <div id="id-sh-btn-asssf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zM473.143 165.876c-40.666-40.748-94.726-63.166-152.34-63.166-118.655 0-215.223 96.592-215.223 215.329 0 37.95 9.921 75.036 28.772 107.647l-30.59 111.604 114.178-29.93c31.489 17.138 66.887 26.21 102.863 26.21h.071c118.667 0 215.353-96.604 215.353-215.319 0-57.579-22.394-111.639-63.084-152.364v-.011zm-152.27 331.362c-32.185 0-63.662-8.67-91.135-24.98l-6.555-3.898-67.76 17.776 18.094-66.06-4.217-6.792c-18.06-28.43-27.425-61.347-27.425-95.221 0-98.706 80.28-179.057 179.093-179.057 47.776 0 92.812 18.697 126.58 52.477 33.744 33.827 52.359 78.768 52.359 126.639-.095 98.788-80.399 179.093-179.034 179.093v.023zm98.139-134.116c-5.339-2.705-31.831-15.65-36.756-17.469-4.89-1.842-8.516-2.752-12.166 2.693-3.52 5.363-13.878 17.54-17.032 21.154-3.141 3.555-6.26 4.04-11.61 1.347-5.374-2.693-22.784-8.41-43.312-26.717-15.98-14.292-26.787-31.938-29.953-37.288-3.177-5.315-.342-8.339 2.386-10.926 2.48-2.41 5.374-6.295 8.09-9.437 2.73-3.141 3.556-5.338 5.351-9 1.772-3.543.898-6.673-.449-9.413-1.346-2.693-12.153-29.221-16.523-39.993-4.335-10.524-8.823-9.06-12.142-9.272-3.166-.13-6.697-.13-10.288-.13-3.543 0-9.378 1.335-14.35 6.733-4.926 5.327-18.827 18.378-18.827 44.87 0 26.493 19.228 52.04 21.957 55.69 2.74 3.567 37.96 57.957 91.926 81.26 12.839 5.493 22.855 8.8 30.638 11.328 12.922 4.11 24.615 3.508 33.886 2.138 10.323-1.524 31.82-12.98 36.32-25.572 4.523-12.579 4.523-23.303 3.153-25.535-1.287-2.398-4.819-3.697-10.287-6.473l-.012.012z"></path></svg>
+            </div>
+            </a></div>
+              <div class="_19-vmo"><a title="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.lastevents.space/news/read/view/${n.image}" rel="nofollow noopener">
+            <div id="id-sh-btn-asssf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm186 1117h311V744h-311c-240 0-435 195-435 435v186h-249v373h249v994h373v-994h311l62-373h-373v-186c0-34 28-62 62-62z"></path></svg>
+            </div>
+            </a></div>
+            </div>
+          </div>
+              </div>
+            </div>`
+          ldfa = document.createElement("div");
+          ldfa.innerHTML = dafo;
+          parw0q8.appendChild(ldfa);
+                  }
+                  rodf = rodf + vauro;
+                  v342 = 0;
+                        }
+    })
+    document.addEventListener("DOMContentLoaded", (e)=>{
+        document.addEventListener("click", (e)=>{
+          if(e.target.id == "_07-mxm"){
+          vshr = document.getElementById(e.target.dataset.element);
+            if(vshr.dataset.element == "true"){
+          vshr.style.display="block";
+              vshr.setAttribute("data-element", "false");
+            }else if(vshr.dataset.element == "false"){
+          vshr.style.display="none";
+              vshr.setAttribute("data-element", "true");
+            }
+        }
+          if(e.target.id == "_07-cxt"){
+            vr34w = document.getElementById(e.target.dataset.element);
+            $.ajax({type:'POST',
+                  url:`/api/value/${e.target.dataset.id}`,
+                  data:JSON.stringify({}),
+                  contentType:"application/json",
+                  dataType:'json',
+                  success:function(response){
+                    if(response.response == true){
+                      vr34w.innerHTML = parseInt(vr34w.dataset.element) + 1;
+                    vr34w.setAttribute("data-element", parseInt(vr34w.dataset.element) + 1);
+                   }else if(response.response == false){
+                    vr34w.innerHTML = parseInt(vr34w.dataset.element) - 1;
+                    vr34w.setAttribute("data-element", parseInt(vr34w.dataset.element) - 1);
+                   }
+                }
+                })
+          }
+          if(e.target.id == "i-c-0932"){
+            vr34w = document.getElementById("i-c-0932-");
+            vr34w.innerHTML = parseInt(vr34w.dataset.element) + 1;
+            vr34w.setAttribute("data-element", parseInt(vr34w.dataset.element) + 1);
+          }
+          })
+
+        })
+</script>
+
+{% endblock %}

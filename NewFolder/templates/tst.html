@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if href == "paychc" %}
+<div id="id-3_231ir">
+    <div id="id-3_233">
+        Hi, {{username}}
+    </div>
+    <div id="id-3_234">
+        Kindly choose your transaction method,
+    </div>
+    <div id="id-3_235">
+        <a href="/tst/payde?hr=ac"><div id="id-3_235_1">
+            Transact using account number
+        </div></a>
+        <!--<a href="/tst/payde?hr=pn"><div id="id-3_235_2">
+            Transact using phone number
+        </div></a>-->
+    </div>
+</div>
+{% endif %}
+
+{% if href == "payde" %}
+{% if hr == "pn" %}
+<div id="id-3_231ir">
+    <div>
+        <div id="id-42-298">Kindly fill the below details for further actions</div>
+        <div id="id-865h_">
+            {{alert}}
+        </div>
+        <form id="___23-34KFLjafasujiibafi" action="/tst/payde/{{hr}}" method="post" data-element="id-34sf98">
+            <div id="id-id-3w49s">
+                <div id="id-dafasf">Country Code</div>
+                <input id="id-idf" name="cc" required>
+            </div>
+            <div id="id-id-3w49s">
+                <div id="id-dafasf">Phone Number</div>
+                <input id="id-idf" name="phoneno" required>
+            </div>
+            <div id="id-id-3w49s">
+                <button type="submit" id="id-34sf98">Next</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endif %}
+
+{% if hr == "ac" %}
+<div id="id-3_231ir">
+    <div>
+        <div id="id-42-298">Kindly fill the below for further actions</div>
+        <div id="id-865h_">
+            {{alert}}
+        </div>
+        <form id="___23-34KFLjafasujiibafi" action="/tst/payde/{{hr}}" method="post" data-element="id-34sf98">
+            <div id="id-id-3w49s">
+                <div id="id-dafasf">Account Number</div>
+                <input id="id-idf" name="accno" required>
+            </div>
+            <div id="id-id-3w49s">
+                <div id="id-dafasf">SWIFT Code</div>
+                <input id="id-idf" name="ifsc" required>
+            </div>
+            <div id="id-id-3w49s">
+                <button type="submit" id="id-34sf98">Next</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endif %}
+
+{% endif %}
+
+{% if href=="payam" %}
+<div id="id-3_231ir">
+    <div>
+        <div id="id-42-298">Enter the amount you want to transact</div>
+        <div id="id-34df_833">Note:Should be equal to or less than your balance amount</div>
+        <div id="id-342-sffp">
+             Balance : <span>{{balance}}</span>
+        </div>
+        <form id="___23-34KFLjafasujiibafi" action="/tst/payam/su" method="post" data-element="id-34sf98">
+            <div id="id-865h_">
+                {{alert}}
+            </div>
+            <div id="id-id-3w49s">
+                <div id="id-dafasf">Amount</div>
+                <input id="id-idf" name="amount" required>
+            </div>
+            <div id="id-id-3w49s">
+            </div>
+            <div id="id-id-3w49s">
+                <button type="submit" id="id-34sf98">Next</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endif %}
+
+{% if href=="payco" %}
+<div id="id-3_231ir">
+    <div id="id-34sdfsl">
+    Amount will be transacted to your account within today and you will be notified.
+    </div>
+    <div id="id-fsdff86">
+        <span><a href="/data/yourincome">Go to incomedata</a></span>
+    </div>
+</div>
+{% endif %}
+
+<style>
+    #id-3_231ir {
+        width: 50%;
+        height: fit-content;
+        margin: auto;
+        margin-top: 15pc;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20pc;
+        box-shadow: 0px 0px 5px 2px #cdc9c9;
+    }
+    #id-3_233 {
+        margin: auto;
+        width: fit-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 24px;
+        font-family: verdana;
+    }
+    #id-3_234 {
+        padding-bottom: 20px;
+        margin: auto;
+        width: fit-content;
+        font-family: verdana;
+        font-size: 20px;
+    }
+    #id-3_235 {
+        padding-bottom: 20px;
+        font-size: 20px;
+        font-family: verdana;
+        width: 80%;
+        margin: auto;
+    }
+    #id-3_235_1, #id-3_235_2 {
+        cursor: pointer;
+        display: inline-block;
+        width: 49%;
+        border: 1px solid;
+        padding: 23px;
+        border-radius: 18px;
+        text-align:center;
+    }
+    #id-id-3w49s {
+        margin: auto;
+        width: fit-content;
+        padding-top: 30px;
+    }
+    #id-idf {
+        outline: none;
+        height: 30px;
+        width: 100%;
+        padding: 20px;
+        font-size: 24px;
+    }
+    #id-dafasf{
+        font-size: 20px;
+        font-family: verdana;
+        padding-bottom: 10px;
+    }
+    #id-34sf98 {
+        padding: 16px;
+        background: transparent;
+        border: 1px solid;
+        color: white;
+        background: #339952;
+        border-radius: 13px;
+        font-size: 15px;
+    }
+    #id-42-298 {
+        width: fit-content;
+        margin: auto;
+        font-family: verdana;
+        padding-top: 25px;
+        font-size: 27px;
+    }
+    #id-34df_833{
+        font-family: verdana;
+        font-size: 15px;
+        width: fit-content;
+        margin: auto;
+    }
+    #id-342-sffp {
+        width: fit-content;
+        margin: auto;
+        font-size: 40px;
+        padding-top: 30px;
+        font-family: verdana;
+    }
+    #id-34sdfsl {
+        font-size: 30px;
+        padding: 30px;
+        width: fit-content;
+        font-weight: 900;
+        color: #339952;
+        font-family: verdana;
+        margin: auto;
+    }
+    #id-fsdff86 {
+        text-align: center;
+        font-size: 24px;
+        font-family: verdana;
+    }
+    #id-865h_ {
+        background: #f14f4f;
+        margin: auto;
+        color: white;
+        font-family: verdana;
+        width: fit-content;
+    }
+    @media screen and (max-width:900px){
+        #id-3_231ir{
+            width:98%;
+        }
+
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,388 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+
+  body{
+    color: white;
+  }
+
+  ._08-opi{
+    /*background: green;*/
+  /*   width: 900px; */
+    width: 100%;
+    height: 385px;
+    margin: auto;
+    margin-top: 95px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 2px #b0b0b0;
+    overflow: hidden;
+  }
+
+  ._08-ert{
+    width: 100%;
+    height: 100%;
+  }
+
+  ._08-rum{
+    padding: 50px 0px;
+    text-align: center;
+  }
+
+  ._08-pow{
+    font-size: 36px;
+    padding-bottom: 10px;
+  }
+
+  ._08-rew{
+    padding-top: 10px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #_07-cee{
+    cursor: pointer;
+  }
+
+  #_08-cew{
+    text-align: center;
+  }
+
+  ._08-iqa{
+  /*   height: 100px; */
+  /*   width: 100px; */
+        width: 30%;
+        padding: 15px;
+        border-radius: 20px;
+      display: inline-grid;
+    background-image: linear-gradient(45deg, black, #00000029);
+  /*   margin-bottom: 50px; */
+  }
+
+  ._08-icx{
+    padding: 20px 0px 10px 0px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  ._08-pza{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  ._08-kji{
+    margin-top: 50px;
+    position: relative;
+  /*   padding-bottom: 50px; */
+  }
+
+  ._08-xwq{
+    text-align: center;
+  }
+
+  ._08-poa{
+    font-size: 24px;
+  }
+
+  ._08-poz{
+    left:0%;
+  }
+
+  ._08-poc{
+    left: 35%;
+  }
+
+  ._08-pon{
+    left: 70%;
+  }
+
+  ._07-por{
+    width: 100%;
+  }
+
+  ._07-jri{
+    background: white;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px 0px;
+    border-radius: 5px;
+  /*   border: 1px solid; */
+    box-shadow: 0px 0px 10px 2px #b0b0b0;
+  }
+
+  #_08-coi{
+    width: 42%;
+    margin: auto;
+  }
+
+  ._08-iua{
+    width: 70%;
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  ._07-umc{
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+  }
+
+  ._07-yut{
+    width: 600px;
+    border-radius: 15px;
+    margin: auto;
+    overflow: hidden;
+  /*   box-shadow: 0px 0px 12px 5px #a1a1a1; */
+    box-shadow: 0px 0px 6px 2px #d7d7d7;
+  }
+
+  ._07-bri{
+    padding-bottom: 20px;
+    padding-left: 25px;
+    font-size: 16px;
+    color: black;
+  }
+
+  ._19-cox{
+    display: none;
+    width: 100px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 0px 10px 1px #cccccc;
+    padding: 8px 8px 5px 8px;
+    border-radius: 5px;
+    position: absolute;
+    right: -30px;
+    top: -26px;
+  }
+
+  ._19-vmo{
+    display: inline-grid;
+    width: 30%;
+    position: relative;
+  }
+
+  ._07-iew{
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+  }
+
+  ._07-pwq{
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    color: black;
+    position: relative;
+  }
+
+  ._07-pwq span{
+    cursor: pointer;
+  }
+
+  ._08-cix{
+     margin-top: 60px;
+  }
+
+  #_08-vre{
+    /*background: #2a2a2a;*/
+    color: black;
+  }
+
+  @media screen and (max-width:900px){
+    #_08-coi{
+      width: 98%;
+    }
+    ._07-jri{
+      width: 98%;
+  /*     margin: auto; */
+    }
+    ._07-yut{
+      width: 95%;
+    }
+    ._08-iqa{
+      position: static;
+      width: 98%;
+      margin: auto;
+      margin-top: 50px;
+    }
+    ._08-opi{
+      width: 100%;
+      height: 200px;
+    }
+    ._08-iua{
+      width: 98%;
+    }
+    ._08-cix{
+      margin-top: 50px;
+    }
+  }
+
+</style>
+
+
+
+<div class="_08-opi">
+  <img class="_08-ert" src="">
+</div>
+<div class='_08-rum'>
+  <div class="_08-pow" style="color:black;">
+    {{page_details.pagename}}
+  </div>
+  <div class="_08-rew">
+    {% if not current_user_ %}
+    {{page_details.pagedescription}}
+    {% endif %}
+    {% if current_user_ %}
+    <textarea id="_08-vre">{{page_details.pagedescription}}</textarea>
+    <span class="material-symbols-outlined" id="_07-ceq" data-id="/dava/422/{{page_details.pagename}}" style="color:black;cursor:pointer;">
+      upload
+    </span>
+    {% endif %}
+  </div>
+</div>
+<div class='_08-kji'>
+<div id="_08-cew">
+<div class="_08-iqa _08-poz">
+  <div class="_08-icx">Total posts</div>
+  <div class="_08-pza">{{total_posts}}</div>
+</div>
+<div class="_08-iqa _08-poc">
+  <div class="_08-icx">Total value</div>
+  <div class="_08-pza">{{total_value}}</div>
+</div>
+</div>
+</div>
+<div class="_08-cix">
+<div class="_08-iua">Your posts</div>
+<div id='_08-coi'>
+{% for i in page_posts %}
+  <div class="_07-jri" id="_04-dce-{{page_posts.index(i)}}">
+  <div class="_07-bri">
+    <span>{{i.username}}</span>
+    , <span>{{i.pagename}}</span>
+  </div>
+<div class="_07-yut">
+  <img class="_07-por" src="{{i.image}}">
+  {% if i.text|length > 0 %}
+  <div class="_07-umc">{{i.text}}</div>
+  {% endif %}
+</div>
+  <div class="_07-iew">
+    <div class="_07-pwq">
+      <span id="_07-qer-{{page_posts.index(i)}}" data-element="{{i.valuable}}">{{i.valuable}}</span>
+      <span class="material-symbols-outlined" id="_07-cet" data-id="{{i.post_id}}" data-element="_07-qer-{{page_posts.index(i)}}">
+      check_box
+      </span></div>
+    <div class="_07-pwq"><span class="material-symbols-outlined" id="_07-mxm" data-id="" data-element="_07-cox-{{page_posts.index(i)}}">
+      share
+      </span>
+      <div class="_19-cox" id="_07-cox-{{page_posts.index(i)}}" data-element="true">
+        <div class="_19-vmo">
+               <a title="Tweet" target="_blank" href="https://twitter.com/intent/tweet?text=helloworld&amp;url=http://images.lastevents.space/noload.jpg" rel="nofollow noopener">
+      <div id="id-sh-btn-asssf">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zm-59.942 195.935a161.34 161.34 0 0 1-47.079 12.85c16.914-10.086 29.894-26.22 36.095-45.413-15.862 9.39-33.473 16.287-52.087 19.96-15.048-15.92-36.343-25.83-59.942-25.83-45.331 0-82.04 36.685-82.04 82.016 0 6.355.685 12.626 2.09 18.674-68.186-3.484-128.647-36.13-169.148-85.785a82.08 82.08 0 0 0-11.126 41.245c0 28.465 14.457 53.623 36.485 68.257-13.465-.39-26.068-4.11-37.206-10.205v1.04c0 39.756 28.3 72.969 65.86 80.48a82.817 82.817 0 0 1-21.627 2.883c-5.291 0-10.405-.52-15.472-1.477 10.453 32.587 40.713 56.351 76.642 57-28.134 22.04-63.473 35.163-101.954 35.163-6.65 0-13.134-.39-19.606-1.146 36.39 23.362 79.524 36.85 125.872 36.85 150.935 0 233.507-125.056 233.507-233.494 0-3.603-.06-7.122-.236-10.654 16.027-11.457 29.965-25.937 40.925-42.378l.048-.036z"></path></svg>
+      </div>
+      </a>
+        </div>
+        <div class="_19-vmo"><a title="Whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=helloworld http://images.lastevents.space/noload.jpg" rel="nofollow noopener">
+      <div id="id-sh-btn-asssf">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zM473.143 165.876c-40.666-40.748-94.726-63.166-152.34-63.166-118.655 0-215.223 96.592-215.223 215.329 0 37.95 9.921 75.036 28.772 107.647l-30.59 111.604 114.178-29.93c31.489 17.138 66.887 26.21 102.863 26.21h.071c118.667 0 215.353-96.604 215.353-215.319 0-57.579-22.394-111.639-63.084-152.364v-.011zm-152.27 331.362c-32.185 0-63.662-8.67-91.135-24.98l-6.555-3.898-67.76 17.776 18.094-66.06-4.217-6.792c-18.06-28.43-27.425-61.347-27.425-95.221 0-98.706 80.28-179.057 179.093-179.057 47.776 0 92.812 18.697 126.58 52.477 33.744 33.827 52.359 78.768 52.359 126.639-.095 98.788-80.399 179.093-179.034 179.093v.023zm98.139-134.116c-5.339-2.705-31.831-15.65-36.756-17.469-4.89-1.842-8.516-2.752-12.166 2.693-3.52 5.363-13.878 17.54-17.032 21.154-3.141 3.555-6.26 4.04-11.61 1.347-5.374-2.693-22.784-8.41-43.312-26.717-15.98-14.292-26.787-31.938-29.953-37.288-3.177-5.315-.342-8.339 2.386-10.926 2.48-2.41 5.374-6.295 8.09-9.437 2.73-3.141 3.556-5.338 5.351-9 1.772-3.543.898-6.673-.449-9.413-1.346-2.693-12.153-29.221-16.523-39.993-4.335-10.524-8.823-9.06-12.142-9.272-3.166-.13-6.697-.13-10.288-.13-3.543 0-9.378 1.335-14.35 6.733-4.926 5.327-18.827 18.378-18.827 44.87 0 26.493 19.228 52.04 21.957 55.69 2.74 3.567 37.96 57.957 91.926 81.26 12.839 5.493 22.855 8.8 30.638 11.328 12.922 4.11 24.615 3.508 33.886 2.138 10.323-1.524 31.82-12.98 36.32-25.572 4.523-12.579 4.523-23.303 3.153-25.535-1.287-2.398-4.819-3.697-10.287-6.473l-.012.012z"></path></svg>
+      </div>
+      </a></div>
+        <div class="_19-vmo"><a title="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://images.lastevents.space/noload.jpg" rel="nofollow noopener">
+      <div id="id-sh-btn-asssf">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm186 1117h311V744h-311c-240 0-435 195-435 435v186h-249v373h249v994h373v-994h311l62-373h-373v-186c0-34 28-62 62-62z"></path></svg>
+      </div>
+      </a></div>
+      </div>
+    </div>
+    {% if current_user_ %}
+    <div class="_07-pwq"><span class="material-symbols-outlined" id="_04-dce" data-id="/delete/ge/post/{{i.post_id}}" data-element="_04-dce-{{page_posts.index(i)}}">
+      delete
+      </span></div>
+      {% endif %}
+  </div>
+</div>
+{% endfor %}
+
+
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", ()=>{
+    document.addEventListener("click", (e)=>{
+          if(e.target.id == "i--cdd-df-"){
+            if(e.target.dataset.element == "true"){
+
+             document.getElementById(e.target.dataset.id).style.display = "block";
+             e.target.setAttribute("data-element", "false");
+            }else if(e.target.dataset.element == "false"){
+
+              document.getElementById(e.target.dataset.id).style.display = "none";
+             e.target.setAttribute("data-element", "true");
+            }
+          }
+          if(e.target.id == "_04-dce"){
+            e.preventDefault();
+            if(confirm("Are you sure to delete?")){
+            e.target.setAttribute("class", "");
+            e.target.innerHTML = "Loading..";
+            $.ajax({
+              type:'POST',
+              url:`${e.target.dataset.id}`,
+              data:JSON.stringify({}),
+              contentType:"application/json",
+              dataType:'json',
+              success:function(response){
+                 document.getElementById(e.target.dataset.element).remove();
+              }
+            })
+            }
+           }
+          if(e.target.id == "_07-cet"){
+            vr34w = document.getElementById(e.target.dataset.element);
+            $.ajax({type:'POST',
+                  url:`/api/value/${e.target.dataset.id}`,
+                  data:JSON.stringify({}),
+                  contentType:"application/json",
+                  dataType:'json',
+                  success:function(response){
+                    if(response.response == true){
+                      vr34w.innerHTML = parseInt(vr34w.dataset.element) + 1;
+                    vr34w.setAttribute("data-element", parseInt(vr34w.dataset.element) + 1);
+                   }else if(response.response == false){
+                    vr34w.innerHTML = parseInt(vr34w.dataset.element) - 1;
+                    vr34w.setAttribute("data-element", parseInt(vr34w.dataset.element) - 1);
+                   }
+                }
+                })
+          }
+          if(e.target.id == "_07-mxm"){
+            vshr = document.getElementById(e.target.dataset.element);
+              if(vshr.dataset.element == "true"){
+            vshr.style.display="block";
+                vshr.setAttribute("data-element", "false");
+              }else if(vshr.dataset.element == "false"){
+            vshr.style.display="none";
+                vshr.setAttribute("data-element", "true");
+              }
+          }
+          if(e.target.id == "_07-ceq"){
+            de24_ = document.getElementById("_08-vre");
+            $.ajax({type:'POST',
+            url:e.target.dataset.id,
+            data:JSON.stringify({de24:de24_.value}),
+            contentType:"application/json",
+            dataType:'json',
+            success:function(response){
+                  if(response.response == 211){
+                    alert("Description exceeds 100 characters");
+                  }
+            }
+          })
+          }
+    })
+  })
+</script>
+  {% endblock %}

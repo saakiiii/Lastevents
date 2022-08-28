@@ -1,0 +1,378 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+body{
+    font-family: monospace;
+  }
+
+  ._13-czr{
+    width: 100%;
+      height: 100%;
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    background: #080808b8;
+  }
+
+  ._13-xpo{
+    width: 40%;
+    height: 100%;
+    background: black;
+    color: black;
+  /*       box-shadow: 0px 0px 19px 2px black; */
+  }
+
+  ._13-vxt{
+
+  }
+
+  ._13-cip{
+  /*   text-align: center; */
+    font-size: 20px;
+    padding: 20px 0px 20px 20px;
+  }
+
+  ._13-xso{
+    position: relative;
+    font-size: 24px;
+    border-bottom: 1px solid white;
+  }
+
+  ._13-pxz{
+    padding: 10px;
+  }
+
+  ._13-toz{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  ._13-toz span{
+    cursor: pointer;
+  }
+
+  ._13-bcq{
+    text-align: center;
+  }
+
+  ._13-bcx{
+    text-align: center;
+    width: 9%;
+    display: inline-grid;
+  }
+
+  ._13-pov{
+    text-align: left;
+    width: 30%;
+  }
+
+  ._13-xia{
+      display: none;
+  }
+
+  ._13-vat{
+    margin-top: 50px;
+  }
+
+  ._13-vac{
+    color: black;
+    padding: 25px 0px;
+    box-shadow: 0px 0px 36px 23px #e4e4e4;
+    border-radius: 5px;
+    width: 60%;
+    margin: auto;
+    margin-top: 150px;
+  }
+
+  #_13-cxu{
+    cursor: pointer;
+  }
+
+  ._13-vmx{
+    margin-left: 10px;
+    width: fit-content;
+    font-size: 36px;
+    border-bottom: 3px solid green;
+  }
+
+  ._13-vmw{
+    padding: 30px 0px;
+    text-align: center;
+  }
+
+  ._13-vmw span{
+    font-size: 90px;
+  }
+
+  ._13-vmy{
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  ._13-vaz{
+    display: inline-block;
+  }
+
+  ._13-xcq{
+    color: black;
+    height: 100%;
+    padding: 23% 0%;
+    text-align: center;
+  }
+
+  ._13-ziu{
+    padding: 30px 0px;
+  }
+
+  ._13-dgn{
+    display: inline-grid;
+  }
+
+  ._13-xza{
+    background: #339952;
+    color: black;
+  }
+
+  ._13-xzb{
+    background: #white;
+  /*   color: black; */
+  }
+
+  ._13-caa{
+      font-size: 20px;
+      padding: 7px 15px;
+      border: none;
+      cursor: pointer;
+       box-shadow: 0px 0px 5px 1px #bfbcbc;
+  }
+
+  ._13-vvq{
+    height: 100px;
+    width: 100px;
+    background-image: linear-gradient;
+  }
+
+  ._13-vvz{
+    z-index: -1;
+    animation-name: s_342;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+  }
+
+  /* @keyframes s_342{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.3);}
+  } */
+  ._13-vna{
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 5px;
+    display: inline-grid;
+  }
+
+  ._13-cxw{
+  /*   display: none; */
+  }
+
+  ._13-vak{
+   width: 100%;
+      height: fit-content;
+      background: black;
+      color: black;
+      /* bottom: 0px; */
+      margin-top: 200px;
+      padding: 25px 0px;
+      position: absolute;
+      right: 0px;
+      z-index: -1;
+      box-shadow: 0px 0px 3px 0px black;
+  }
+
+  ._13-vio{
+    display: inline-grid;
+    width:18%;
+    text-align: center;
+  }
+
+  ._13-vio a{
+    color: white;
+  }
+
+  ._13-xiu{
+    text-align: center;
+  }
+
+  ._13-cop{
+    font-size: 20px;
+    padding: 20px 0px;
+  }
+
+  ._13-xoa{
+    text-decoration: underline;
+    font-size: 22px;
+  }
+
+  ._13-cox{
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+
+  ._13-cxb{
+  /*   padding-left: 10px; */
+  /*   width: 9%; */
+    position: absolute;
+    left: 7px;
+  }
+
+  ._13-cow{
+  /*   display: inline-grid; */
+  }
+
+  ._13-xoq{
+  /*   width: 90%; */
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  @media screen and (max-width: 900px){
+    ._13-xcq{
+      text-align: none;
+    }
+    ._13-vac{
+        width: 95%;
+    }
+    ._13-vna{
+      font-size: 30px;
+    }
+    ._13-caa{
+      font-size: 18px;
+    }
+    ._13-bcq{
+      display: none;
+    }
+    ._13-xia{
+      display: block;
+    }
+    ._13-vio{
+      width: 100%;
+    }
+    ._13-xpo{
+      width: 70%;
+    }
+    ._13-xso{
+      font-size: 18px;
+    }
+    ._13-xcq{
+      padding: 65% 0% 25% 0%;
+    }
+  }
+
+</style>
+  <div class="_13-xcq">
+    <div class="_13-vaz _13-vna">
+      lastevents.
+    </div>
+    <div class="_13-vna _13-vvz">space</div>
+      <div class="_13-ziu">
+        {% if not logged_in %}
+      <div class="_13-dgn">
+        <div class=""><button class="_13-caa _13-xza"><a href="/signup" style="color:white">Sign Up</a></button></div>
+      </div>
+      <div class="_13-dgn">
+        <div><button class="_13-caa -13-xzb"><a href="/login" style="color:black">Log In</a></button></div>
+        </div>
+        {% endif %}
+        {% if logged_in %}
+        <div class="_13-dgn">
+            <div class=""><button class="_13-caa _13-xza"><a href="/news/read" style="color:white;">Explore<a></button></div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="_13-vvq"></div>
+    <div class="_13-vac">
+      <div class="_13-vaw _13-vmx"><a href="/signup" style="text-decoration: none; color: black;">SIGNUP</a></div>
+      <div  class="_13-vaw _13-vmw"><span class="material-symbols-outlined">
+contact_page
+</span></div>
+      <div class="_13-vaw _13-vmy">
+        Sign up on lastevents.space and explore and contribute to become a member
+    </div>
+    </div>
+    <div class="_13-vac">
+      <div class="_13-vaw _13-vmx"><a href="/login" style="text-decoration: none; color: black;">LOGIN</a></div>
+      <div  class="_13-vaw _13-vmw"><span class="material-symbols-outlined">
+login
+</span></div>
+      <div class="_13-vaw _13-vmy">Login and create new articles, publish, read at no cost
+    </div>
+    </div>
+    <div class="_13-vac _13-vat">
+          <div class="_13-vaw _13-vmx"><a href="/news/read" style="text-decoration: none; color: black;">Read</a></div>
+          <div  class="_13-vaw _13-vmw"><span class="material-symbols-outlined">
+    local_library
+    </span></div>
+          <div class="_13-vaw _13-vmy">We are providing you with news articles about the lastevents written by the people all
+            over the world, read local and worldwide news, lastest events, interesting articles here...
+            Get the information about the last event in your local area in your regional language</div>
+        </div>
+        <div class="_13-vac">
+          <div class="_13-vaw _13-vmx"><a href="/news/write" style="text-decoration: none; color: black;">Write</a></div>
+          <div  class="_13-vaw _13-vmw"><span class="material-symbols-outlined">
+    drive_file_rename_outline
+    </span></div>
+          <div class="_13-vaw _13-vmy">Write about the latest events around you in your style and language, Write news aritcles (lastevents), blog articles and publish them, Write news articles in your style at the writing space and publish them and get paid
+        </div>
+        </div>
+        <div class="_13-vac">
+          <div class="_13-vaw _13-vmx"><a href="/earninfo" style="text-decoration: none; color: black;">Earn</a></div>
+          <div  class="_13-vaw _13-vmw">
+    <span class="material-symbols-outlined">
+    account_balance_wallet
+    </span></div>
+          <div class="_13-vaw _13-vmy">Earn money by your news articles, blog articles, views of your articles boost your income. Increase your contributions, become a member and start your earning
+        </div>
+        </div>
+        <div class="_13-vac">
+          <div class="_13-vaw _13-vmx"><a href="/tst/payam" style="text-decoration: none; color: black;">Transact</a></div>
+          <div  class="_13-vaw _13-vmw">
+    <span class="material-symbols-outlined">
+    payments
+    </span></div>
+          <div class="_13-vaw _13-vmy">Income will be updated at the end of each week. You can transact the amount to  your account
+            easily by one click.</div>
+        </div>
+        <footer class="_13-vak">
+          <div class="_13-xiu">
+          <div class="_13-vio">
+            <div class="_13-cop _13-cox"><a href="/">Lastevents</a></div>
+            <div style="color: white;">Keep You Updated</div>
+          </div>
+          <div class="_13-vio">
+            <div class="_13-cop"><a>Facebook</a></div>
+            <div class="_13-cop"><a>Twitter</a></div>
+            <div class="_13-cop"><a>Linkedin</a></div>
+          </div>
+          <div class="_13-vio">
+            <div class="_13-cop"><a href="/">Home</a></div>
+            <div class="_13-cop"><a href="/about">About</a></div>
+            <div class="_13-cop"><a href="/contact">Contact</a></div>
+          </div>
+          <div class="_13-vio">
+            <div class="_13-cop"><a href="/privacy">Privacy</a></div>
+            <div class="_13-cop"><a href="/terms">Terms</a></div>
+            <div class="_13-cop"><a href="/blog/read">Blog</a></div>
+          </div>
+          <div class="_13-vio ">
+            <div class="_13-cop"><a href="/signup">Signup</a></div>
+            <div class="_13-cop"><a href="/login">Login</a></div>
+          </div>
+          </div>
+        </footer>
+
+
+
+{% endblock %}
+

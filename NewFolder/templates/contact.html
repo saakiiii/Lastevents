@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Main Area -->
+    <div class="c-v-wi" id="id-1234-3032">
+        <form id="___23-34KFLjafasujiibafi" action="/contact" method="post" data-element="id-1234-3032-06-01-btn">
+        <div id="id-1234-3032-01">
+            <h2>Contact</h2>
+            <h4>{{alert}}</h4>
+        </div>
+        <div id="id-1234-3032-02">
+            <div id="id-1234-3032-02-01">
+                <input type="email" name="email" style='{{emailalert}}' id="id-1234-3032-01-01-in" placeholder="Your email" required>
+            </div>
+        </div>
+        <div id="id-1234-3032-03">
+            <div id="id-42234-234-32423433-23">
+                <div id="id-1234-3032-03-01">
+                <textarea name="message" id="id-23424-___4222" style="border-radius:10px" placeholder="Enter your message, feedback or reports here" minlength="5" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div id="id-1234-3032-06">
+            <div id="id-1234-3032-06-01">
+                <button type="submit" class="c-b-s cl-454352-dm-g" id="id-1234-3032-06-01-btn">Send</button>
+            </div>
+        </div>
+    </form>
+    </div>
+    <!-- End Main Area -->
+    <style>
+        .c-b-s{
+            border: 2px solid #339952;
+            padding: 10px 50px;
+            background: transparent;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+        
+        .c-v-wi{
+            width: 60%;
+        }
+
+       
+     
+        input, textarea{
+            height: 50px;
+            outline: none;
+            border-radius: 10px;
+            border: 1px solid #339952;
+            width: 60%;
+            padding-left: 20px;
+            resize: vertical;
+        }
+    
+        #id-1234-3032-02{
+            padding: 30px 0;
+        }
+    
+        #id-1234-3032-03{
+            padding: 0px 0px 10px 0px;
+        }
+    
+        #id-1234-3032{
+            margin: auto;
+            margin-top: 10pc;
+            width: 40%;
+            background: white;
+            text-align: center;
+            box-shadow: 0px 0px 8px 2px #b0b0b0;
+            padding: 40px 0;
+        }
+    
+        #id-s-to{
+            background: #ebebeb;
+        }
+    
+        #id-1234-3032-06-01{
+             padding: 20px 0px;
+        }
+        @media screen and (max-width:900px){
+            #id-1234-3032{
+                width: 95%;
+            }
+        }
+    </style>
+    
+{% endblock %}

@@ -1,0 +1,310 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body{
+        /*   font-family: cursive; */
+        }
+
+        a{
+          color: #2A2A2A;
+        }
+
+        #_01-woe{
+          width: 100%;
+        /*   height: 100%; */
+          margin-top: 200px;
+        }
+
+        #_01-wor{
+          width: 80%;
+          height: 105%;
+          background: white;
+          margin: auto;
+          position: relative;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0px 0px 48px 7px #dddcdc;
+        }
+
+        #_01-wot{
+           width: 50%;
+           height: 100%;
+           padding: 40px 30px;
+           background: #339952;
+           text-align: center;
+           color: white;
+        }
+
+         #_01-woy{
+           width: 50%;
+           height: 100%;
+        /*    background: yellow; */
+           position: absolute;
+           right: 0px;
+           top: 0px;
+           text-align: center;
+        }
+
+        #_01-fas{
+           padding: 20px 20px 10px 20px;
+           text-align: center;
+        }
+
+        #_01-wop{
+          padding-bottom: 10px;
+        }
+
+        #_01-ore, #_01-orb{
+          width: 90%;
+          height: 70%;
+          margin: auto;
+        /*   background: yellow; */
+          text-align: left;
+        /*   padding-left: 10px; */
+        /*   padding-right: 10px; */
+        }
+
+        #_01-orb{
+        }
+
+        #_01-afp{
+          padding: 30px;
+          font-size: 24px;
+        }
+
+        #_01-inl{
+          padding-top: 75px;
+          padding-bottom: 10px;
+        }
+
+        #_01-apl{
+        }
+
+        #_01-opn{
+          padding-top: 2%;
+          font-size: 18px;
+        }
+
+        ._01-ava{
+          font-size: 20px;
+        }
+
+        ._01-asl{
+          padding-left: 10px;
+          padding-right: 18px;
+        }
+
+        ._01-apa{
+          padding-top: 10px;
+        }
+
+        ._01-sad{
+          border-right: 1px solid;
+        }
+
+        ._01-asd{
+          font-size: 36px;
+        }
+
+        ._01-asm{
+          font-size: 40px;
+        }
+
+        ._01-ado{
+          font-size: 24px;
+        }
+
+        ._01-awe{
+          font-family: verdana;
+        }
+
+        ._01-aga{
+          font-family: verdana;
+        }
+
+        ._01-q11{
+          font-family: verdana;
+        }
+
+        ._01-pfa{
+        }
+
+        ._01-opm{
+            color: white;
+        }
+
+        ._01-anm{
+          border: none;
+          width: 100%;
+          height: 35px;
+          outline: none;
+          background: #7eb97e;
+          color: white;
+          border-radius: 5px;
+        /*   padding-left: 5px; */
+        }
+
+        #_01-afv{
+          width: fit-content;
+          margin: auto;
+          padding: 20px 0px 0px 0px;
+        }
+
+        ._01-xsx{
+            padding-left: 10px;
+            font-size: 24px;
+        }
+
+        ._01-adl{
+          padding: 3px 15px;
+          font-size: 20px;
+          background: transparent;
+          transition: .5s;
+          border: 1px solid #2A2A2A;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        ._01-adl:hover{
+          background: #2A2A2A;
+          color: white;
+        }
+
+        ._01-nac{
+          background: #2A2A2A;
+          color: white;
+        }
+
+        #_01-aop{
+            text-align: right;
+            padding: 7px 10px;
+        }
+
+        @media screen and (max-width:900px){
+          #_01-woe{
+            height: fit-content;
+          }
+          #_01-wot{
+             width: 100%;
+             padding-bottom: 30px;
+          }
+          #_01-woy{
+            position: static;
+            width: 100%;
+            padding-bottom: 30px;
+          }
+          #_01-inl{
+            padding-top: 20px;
+          }
+          #_01-wor{
+            height: fit-content;
+            width: 95%;
+          }
+        }
+</style>
+
+    <!-- Main Area -->
+
+<div id="_01-woe">
+    <form id="___23-34KFLjafasujiibafi" action="/login" method="post" data-element="id-1234-3032-06-01-btn">
+        <div id="_01-wor">
+        <div class="" id="_01-wot">
+          <div class="_01-asd" id="_01-fas">
+            Login
+          </div>
+          <div id="_01-wop">
+             Know about the latest events
+          </div>
+
+          <div id="_01-ore">
+            <div class="_01-asl _01-apa">
+            Email
+            </div>
+            <div class="_01-asl ">
+              <input class="_01-anm" name="email" type="email" required>
+              {% if emailalert %}
+              <div class="_01-opm">{{emailalert}}</div>
+              {% endif %}
+            </div>
+            <div class="_01-asl _01-apa">
+            Password
+            </div>
+            <div class="_01-asl">
+              <input class="_01-anm" type='password' name="password" required>
+              {% if passwordalert %}
+              <div class="_01-opm">{{passwordalert}}</div>
+              {% endif %}
+            </div>
+            <div id="_01-aop">
+              <a href="/forgotpassword">Forgot password?</a>
+            </div>
+          </div>
+            <div id="_01-afv">
+              <button class="_01-adl _01-nac" type="submit">Login</button>
+            </div>
+        </div>
+        <div id="_01-woy">
+          <div class = "_01-asd _01-asm" id="_01-inl">
+            lastevents.space
+          </div>
+          <div id="_01-apl">
+            Keep You Updated
+          </div>
+          <div id="_01-afp">
+            Know about the latest events happened around you and world. Get all information in one place.
+          </div>
+          <div id="_01-opn">
+            Already registered?
+          </div>
+          <div id="_01-lmo">
+            <a class="_01-ava" href="/signup">Sign Up</a>
+          </div>
+        </div>
+    </div>
+</form>
+</div>
+      <script>
+        document.addEventListener("click", (e)=>{
+            if(e.target.id == "_01-adl"){
+              document.getElementById(e.target.dataset.element).style.display = "none";
+              document.getElementById("_01-orb").style.display="block";
+            }
+            if(e.target.id == "_01-adb"){
+              document.getElementById(e.target.dataset.element).style.display = "none";
+
+            document.getElementById("_01-ore").style.display = "block";
+            }
+            if(e.target.id == "_01-coe"){
+                document.getElementById(e.target.dataset.element).value = "";
+            }
+          })
+          function f4rwc3(id,from_id){
+            val=document.getElementById(id).value;
+            $.ajax({
+                type:'POST',
+                url:'/api/get/states',
+                data:JSON.stringify({country:val}),
+                contentType:"application/json",
+                dataType:'json',
+                success:function(response)
+                {
+                    vr34vv=document.getElementById(from_id);
+                    vr34vv.innerHTML='';
+                    var v4234wrwer=document.createElement("option");
+                    v4234wrwer.disable=true;v4234wrwer.value='';
+                    v4234wrwer.innerHTML='State';
+                    vr34vv.appendChild(v4234wrwer);
+                    for(i=0;i<response.result.length;i++){
+                        var v4234wrwer=document.createElement("option");
+                        v4234wrwer.value=response.result[i];
+                        v4234wrwer.innerHTML=response.result[i];
+                        vr34vv.appendChild(v4234wrwer);
+                    }
+                   }
+                 })
+
+                }
+      </script>
+      {% endblock %}

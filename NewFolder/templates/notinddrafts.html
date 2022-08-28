@@ -1,0 +1,116 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if get_value == 'not' %}
+<div class="c-v-wi" id="i-no-ma">
+    <div id="i-no-h">Notifications
+      <span class="material-symbols-outlined">
+  notifications
+  </span>
+   </div>
+    <div>
+        {% for i in data %}
+      <div class="c-no-tem" id="id-8085-{{data.index(i)}}">
+        <div id='i-fi9f7-'>
+          <span class="c-d-t">{{i.date}}</span>
+          {% if i.time_ago != None %}
+            <span class="c-d-t">{{i.time_ago}}</span>
+            {% endif %}
+          <span class="material-symbols-outlined" title="Delete" style="cursor:pointer; right:5px; position: absolute;" accessKey="{{i.notify_id}}" id="id-si-efjidsnll_01--01-809807" data-element="id-8085-{{data.index(i)}}" >delete</span>
+        </div>
+        {{i.notify_msg}}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+{% if get_value == "dr" %}
+<div class="c-v-wi" id="i-no-ma">
+    <div id="i-no-h">Drafts
+      <span class="material-symbols-outlined">
+  drafts
+  </span>
+   </div>
+    <div>
+        {% for i in data %}
+      <div class="c-no-tem"  id="id-8085-{{data.index(i)}}">
+        <div id='i-fi9f7-'>
+          <span class="c-d-t">{{i.date}}</span>
+          {% if i.time_ago != None %}
+            <span class="c-d-t">{{i.time_ago}}</span>
+            {% endif %}
+          <span class="material-symbols-outlined" style="cursor:pointer; right:5px; position: absolute;" title="Delete" accessKey="{{i.draft_id}}" id="id-si-efjidsnll_01--01-809807-084024" data-element="id-8085-{{data.index(i)}}" >delete</span>
+        </div>
+        {% if i.heading| length < 1 %}
+        <a href="/{{i.type}}/edit?viawe={{i.draft_id}}&v=dt"><h3>Draft(empty)</h3></a>
+        {% endif %}
+        {% if i.heading|length > 0 %}
+        <a href="/{{i.type}}/edit?viawe={{i.draft_id}}&v=dt"><h3>{{i.heading}}</h3></a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+<style>
+    #i-no-ma{
+        /*   box-shadow: 0px 0px 5px 0px; */
+          box-shadow: 0px 1px 5px 3px #b0b0b0;
+          margin: auto;
+
+        }
+
+        #i-no-h{
+          text-align: center;
+          font-family: verdana;
+          padding: 10px 0px;
+          font-size: 20px;
+        }
+
+        .c-v-wi{
+          width: 60%;
+        }
+
+        .c-no-tem{
+          font-family: verdana;
+          font-size: 20px;
+          padding: 20px;
+        /*   width: 100%; */
+          position: relative;
+        }
+
+        .c-d-t{
+          padding-left: 10px;
+          font-size: 16px;
+        }
+
+        #i-fi9f7-{
+           background: #dadac0;
+          padding: 5px 0px;
+          position: relative;
+          font-size: 16px;
+        }
+
+        #i-ic-t{
+          cursor: pointer;
+          position: absolute;
+          right: 5px;
+        }
+
+        #i-no-ma{
+            margin-top: 300px;
+            margin-bottom: 100px;
+        }
+        @media screen and (max-width:900px){
+          .c-v-wi{
+            width: 98%;
+          }
+
+        }
+</style>
+
+  {% endblock %}

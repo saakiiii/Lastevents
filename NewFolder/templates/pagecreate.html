@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    #i-c-p{
+        box-shadow: 0px 0px 10px 0px #b0b0b0;
+         padding-bottom: 30px;
+         margin: auto;
+         margin-top: 10pc;
+         border-radius: 20px;
+         background: #d1d1b3;
+        }
+        
+
+        
+        .c-v-wi{
+          width: 45%;
+        }
+        
+        #i-c-p-r{
+          width: 80%;
+          margin: auto;
+          
+        }
+        
+        .c-l-l-f{
+          font-size: 25px;
+          font-family: verdana;
+          padding-top: 30px;
+        }
+        
+        .c-l-l-f-i{
+           width: 98%;
+          height: 50px;
+          font-size: 25px;
+          outline: none;
+          background: #2a2a2a;
+          color: white;
+        }
+        
+        .c-d-s{
+          height: 100px;
+        }
+        
+        textarea{
+          resize: none;
+        }
+        
+        .c-i8{
+          width: 48%;
+          display: inline-block;
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border: 1px solid;
+          font-size: 18px;
+          font-family: verdana;
+          cursor: pointer;
+          transition: 0.8s;
+        }
+        
+        .c-i8:hover{
+          background: black;
+          color: white;
+        }
+        
+        .c-i8-{
+          background: black;
+          color: white;
+        }
+        
+        .c-i-d{
+          padding-top: 10px;
+        }
+        
+        .c-bu-t{
+          padding-top: 30px;
+          text-align: center;
+        }
+        
+        .c-b{
+            padding: 11px 23px;
+            font-size: 26px;
+            font-family: verdana;
+            border: 1px solid #339952;
+            background: transparent;
+            border-radius: 5px;
+            transition: 0.8s;
+        }
+        
+        .c-b:hover{
+          background: #339952;
+          color: white;
+        }
+        
+        .c-n-{
+          font-family: verdana;
+        }
+        
+        .c-p-c{
+            text-align: center;
+            padding-top: 20px;
+            font-size: 30px;
+        }
+
+        .c-a-me{
+          color: red;
+        }
+
+        .c-ta-a{
+          text-align: center;
+        }
+
+        @media screen and (max-width:900px){
+          .c-v-wi{
+            width: 98%;
+          }
+          .c-l-l-f, .c-l-l-f-i{
+            font-size: 20px;
+          }
+        }
+</style>
+
+<form  id="___23-34KFLjafasujiibafi" action="/create/page?to={{get_value}}" method="post" data-element="i-c-p-adfw">
+<div class="c-v-wi" id="i-c-p">
+    <div class="c-p-c">Create Page</div>
+    <div class="c-a-me c-ta-a">{% if pageinfo %}
+    {{pageinfo}}
+    {% endif %}</div>
+    <div id="i-c-p-r">  
+      <div class="c-l-l-f">Page Name</div>
+    <div class="c-i-d">
+      <input class="c-l-l-f-i" placeholder="Page name" name="pagename">
+      <div class="c-a-me">
+        {% if pagealert %}
+      {{pagealert}}
+      {% endif %}
+        {% if pagenamealert %}
+      {{pagenamealert}}
+      {% endif %}
+      {% if pagenamealert1  %}
+        {{pagenamealert1}}
+        {% endif %}
+      </div>
+    </div>
+    <div  class="c-l-l-f">Page Description</div>
+    <div class="c-i-d">
+      <textarea class="c-l-l-f-i c-d-s" placeholder="Page description" name="pagedescription"></textarea>
+      <div class="c-a-me">{% if pagedescalert %}
+      {{pagedescalert}}
+      {% endif %}
+      {% if pagedescalert1 %}
+      {{pagedescalert1}}
+      {% endif %}</div>
+    </div>
+    <input type="hidden" id="i-im--p" name="pagepurpose" value="">
+    <div class="c-l-l-f">Page Purpose</div>
+  <div class="c-i-d">
+    <div class="c-i8" id="i-b-2">Meme</div>
+    <div class="c-i8" id="i-b-3">Other</div>
+    <div class="c-a-me">{% if pagepuralert %}
+    {{pagepuralert}}
+    {% endif %}</div>
+    <p class="c-n-">Note:Page for memes is eligible for earning</p>
+    </div>
+      <div class="c-bu-t">
+      <button class="c-b" id="i-c-p-adfw" type="submit">Create</button>
+      </div>
+      </div>
+  </div>
+
+  <script>
+    
+document.addEventListener("DOMContentLoaded", (e)=>{
+    document.addEventListener("click", (e)=>{
+        if(e.target.id == "i-b-2"){
+          e.target.setAttribute("class", "c-i8 c-i8-");
+          document.getElementById("i-im--p").value = "meme";
+          document.getElementById("i-b-3").setAttribute("class", "c-i8");
+        } 
+        if(e.target.id=='i-b-3'){
+          e.target.setAttribute("class", "c-i8 c-i8-");     
+          document.getElementById("i-im--p").value = "others";
+        document.getElementById("i-b-2").setAttribute("class", "c-i8");
+        }
+      
+      }); 
+      
+    });
+        
+  </script>
+{% endblock %}

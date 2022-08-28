@@ -1,0 +1,903 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .c-v-wi{
+        width: 80%;
+        margin: auto;
+      }
+
+      .c-f-m{
+        font-size: 20px;
+        font-family: verdana;
+      }
+
+      .c-p-d{
+        padding-top: 10px;
+        padding-bottom: 30px;
+        margin: auto;
+
+        margin-top: 15px;
+
+      }
+
+      #i-f0-fv{
+        width: 30%;
+        height: 100px;
+      /*   background: green; */
+        position: fixed;
+        right: 5px;
+      }
+
+      #i-f-pe{
+        width: 69%;
+        height: 100pc;
+      /*   background: yellow; */
+      /*   padding-top: 30px; */
+        padding-bottom: 30px;
+        margin-top: 48px;
+      }
+
+      #i-p-ec{
+         width: 98%;
+         margin: auto;
+         border: 1px solid;
+         overflow: hidden;
+        position: relative;
+        background: #f2f2f2;
+        text-align: center;
+      }
+
+      #i-p-ec-1{
+        width: 98%
+      }
+
+      .c-h-te{
+        font-family: verdana;
+        font-size: 30px;
+        font-weight: 900;
+        color: white;
+      }
+
+      #i-da{
+        padding: 20px;
+        display: inline-block;
+      }
+
+      .cl-he-d{
+        color: black;
+        font-size: 25px;
+        font-family: verdana;
+        right: 10px;
+        font-weight: 800;
+      }
+
+      .cl-he-d-l{
+        color: black;
+        font-size: 25px;
+        font-family: verdana;
+        left: 10px;
+        font-weight: 800;
+      }
+
+      #i-dnv{
+        padding:20px;
+        background: #f2f2f2;
+        width: 100%;
+      }
+
+      #i-dnv a{
+          color: black;
+      }
+
+      .c-im{
+        width: 100%;
+      /*   height: 500px; */
+      }
+
+      #id-3423404-1234123840df083042{
+         position:relative;
+      /*    width:75%; */
+        width: 98%;
+        text-align: center;
+      }
+
+      #id-845-sdf8a7d9{
+         width:100%;
+      }
+
+      #id-3249a0df0af09a3-234{
+      /*   position:absolute; */
+        width:25%;
+        padding:10px;
+        padding-top:25px;
+        padding-bottom: 25px;
+      /*   padding-left:10px; */
+        display:inline-block;
+      }
+
+      #id-6876v-b858b76n98n79885{
+      /*     width:70%; */
+        width: 100%;
+         margin-top: 30px;
+          display:inline-block;
+      /*     height:50px; */
+      /*     box-shadow:0px 5px 7px -2px gray; */
+        box-shadow: 0px 0px 10px 2px #e1e1e1;
+      /*     padding:10px; */
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-family:verdana;
+      }
+
+      #id-96987c76-69v8769875{
+          background:#82ce99;
+          width:fit-content;
+          padding:4px;
+          margin-left: 10px;
+        border-radius:5px;
+          color:white;
+      }
+
+      #id-340239842-asfasdf3234{
+        padding-top:15px;
+        padding-bottom:15px;
+        font-size:24px;
+        padding-left: 16px;
+        width:70%;
+        display: inline-block;
+      }
+
+      #id-340239842-asfasdf3234{
+
+      }
+
+
+      #id-sh-btn-asssf{
+        display:inline-block;
+        width:32%;
+        height:30px;
+      }
+
+
+
+      #id-sh-96h_saf--ads8f0 a{
+          text-decoration:none;
+      }
+
+      #id-96987c76-69v876987532{
+          padding:4px;
+      /*     background:#337ab7; */
+          width: fit-content;
+          border-radius: 5px;
+      /*     color:white; */
+          display:inline-block;
+      }
+
+      #id-42038424-fds8f9a73424-4234{
+        padding-top:5px;
+        padding-bottom:15px;
+        padding-left: 6px;
+      }
+
+      #id-qwer0q9wer-4234i234i{
+         padding-top:10px;
+         padding-left: 10px;
+         text-align: left;
+      }
+
+      #id-3420-adf9s,#id-3420-adf9s-0{
+        display:inline-block;
+      }
+
+      #id-3420-adf9s-0{
+      /*   background:gray; */
+        box-shadow:0px 5px 10px -4px gray;
+      /*   color:white; */
+        padding:3px;
+      }
+
+      @media screen and (max-width:900px){
+          #id-3249a0df0af09a3-234{
+          width:fit-content;
+          padding:10px;
+          padding-top:25px;
+          float:none;
+        }
+        #id-340239842-asfasdf3234{
+        padding-top:15px;
+        padding-bottom:15px;
+        padding-left: 0px;
+        font-size:20px;
+        width:95%;
+        margin: auto;
+        text-align:center;
+      }
+        #id-3420-adf9s, #id-3420-adf9s-0{
+          font-size:15px;
+        }
+        #id-96987c76-69v876987532{
+          font-size:15px;
+        }
+        #id-42038424-fds8f9a73424-4234{
+          text-align:center;
+        }
+        #id-sh-btn-asssf{
+          text-align:center;
+      /*     font-size:7px; */
+          width:31%;
+        }
+        #id-sh-btn-asssf svg{
+          width:22px;
+        }
+      }
+
+
+      #id-0121-014-01, #id-0121-014-02, #id-0121-014-03{
+          margin: 0 auto;
+          /* display: inline-block; */
+          height: 10px;
+          width: 97%;
+      /*     position: absolute; */
+      }
+
+      #id-0121-014-01, #id-0121-014-03{
+          /* position: fixed; */
+          /* z-index: -1; */
+          transition: 1s;
+      }
+
+      #id-0121-014-03{
+          top: 110px;
+          position: fixed;
+          left: 75%;
+      }
+
+      #id-0121-014-03{
+          height: 10pc;
+      }
+
+      #id-0121-014-01{
+          font-family: verdana;
+          /* background-color: blueviolet; */
+          height: fit-content;
+          padding: 10px 0px;
+          left: 1%;
+          text-align: center;
+          /* box-shadow: 0px 0px 10px -4px; */
+          /*box-shadow: 0px 0px 1px 0px;*/
+          box-shadow: 0px 0px 0px 2px #f3f0f0;
+      /*     width: 23%; */
+      }
+
+      #id-0121-014-02{
+          /* background-color: firebrick; */
+          width: 50%;
+          /* height: 900pc; */
+          /* z-index: -1; */
+          left: 25%;
+      }
+
+      #id-0121-014-03{
+          /* background-color: cadetblue; */
+          left: 75%;
+          height: fit-content;
+          /* padding-top: 10px; */
+          padding-bottom: 10px;
+          /* width: 25%; */
+      }
+
+      #id-0121-014-01-01,#id-0121-014-01-01-bvyy6{
+          padding-top: 15px;
+          padding-bottom: 15px;
+      }
+
+      #id-0121-014-01-05{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .c-bx-no{
+        box-shadow: none;
+      }
+
+
+
+      .cl-app-b{
+        padding: 10px;
+        border-radius: 10px;
+        border: 3px solid #339952;
+        background: transparent;
+      }
+
+      .c-sel{
+        width: 80%;
+        height: 40px;
+        border: none;
+            box-shadow: 0px 1px 13px 4px #e5e5e5;
+        outline: none;
+      }
+
+      .c-fo-no{
+        font-size: 20px;
+      }
+
+      #id-19-{
+          width: 97%;
+          margin: auto;
+      /*     margin-top: 10px; */
+          margin-top: 20px;
+          box-shadow: 0px 0px 0px 2px #f3f0f0;
+          font-family: verdana;
+        text-align: center;
+        padding:20px;
+      /*   height: 10pc; */
+      /*   overflow-y: scroll; */
+      }
+
+      #i-f0-fv{
+        height: 100%;
+        overflow-y: scroll;
+        padding: 20px 0;
+        margin-top: -50px;
+      }
+
+      .c-fo-hi{
+          font-size: 25px;
+      }
+
+      #i-p-ec, #i-p-ec-1{
+          width: 98%;
+          margin: auto;
+        }
+
+      .cl-bg-b{
+        color: #337ab7;
+      }
+
+      .c-t-ad-n-r{
+        background: #f2f2f2;
+        width: 98%;
+        margin: auto;
+        margin-top: 150px;
+     }
+
+     .c-m-no-_{
+      margin-top: 15px;
+     }
+
+     .c-s-ad-n-r{
+      width: 98%;
+      height:  300px;
+      background: #f2f2f2;
+      margin: auto;
+    }
+
+     .c-h-l{
+         height: 250px;
+     }
+
+    #i-b-c-to-{
+         background: #f2f2f2;
+      }
+
+      @media screen and (max-width:900px){
+
+        .c-no-mar-_-{
+          margin-top: 125px;
+        }
+
+        .c-h-l{
+            height: 200px;
+        }
+
+        #i-f0-fv{
+          position: static;
+          height: 450px;
+        }
+        #i-f-pe{
+          width: 100%;
+        }
+        #i-p-ec, #i-p-ec-1{
+          width: 98%;
+          margin: auto;
+        }
+        .c-fo-hi{
+          font-size: 20px;
+        }
+        #i-f0-fv{
+          width: 100%;
+        }
+        .cl-he-d-l{
+          font-size: 20px;
+        }
+        .cl-he-d{
+          font-size: 20px;
+          top: 20px;
+        }
+        #id-0121-014-01{
+            padding-top: 75px;
+        }
+      }
+</style>
+
+<div id="i-f0-fv">
+  <div class="c-s-ad-n-r c-no-mar-_-">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7237681015099481"
+     crossorigin="anonymous"></script>
+<!-- infeedsquare/side/news/read -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7237681015099481"
+     data-ad-slot="5416505606"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>
+    <div class="c-of-f" id="id-0121-014-01">
+  <form action="/news/read/filter" method="post">
+  <div id="id-0121-014-01-00">
+  <span class="c-fo-hi"></span>
+  {% if alert %}
+    Red fields should not be empty
+  {% endif %}
+  </div>
+  <div id="id-0121-014-01-01-bvyy6">
+  <select class="c-sel" type="text" id="cou-4fsdfsd--asdfadsss" list="countries-797" name="country" value="India" style="" placeholder="Country" required>
+    <datalist id="countries-797">
+      {% if logged_in %}
+      <option value='{{country}}'>{{country}}</option>
+      {% endif %}
+      {% if not logged_in %}
+      <option value='' disable>Country</option>
+      {% endif %}
+      <option value="Afghanistan">Afghanistan</option>
+      <option value="Albania">Albania</option>
+      <option value="Algeria">Algeria</option>
+      <option value="Andorra">Andorra</option>
+      <option value="Angola">Angola</option>
+      <option value="Antarctica">Antarctica</option>
+      <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Armenia">Armenia</option>
+      <option value="Australia">Australia</option>
+      <option value="Austria">Austria</option>
+      <option value="Azerbaijan">Azerbaijan</option>
+      <option value="Bahamas">Bahamas</option>
+      <option value="Bahrain">Bahrain</option>
+      <option value="Bangladesh">Bangladesh</option>
+      <option value="Barbados">Barbados</option>
+      <option value="Belarus">Belarus</option>
+      <option value="Belgium">Belgium</option>
+      <option value="Belize">Belize</option>
+      <option value="Benin">Benin</option>
+      <option value="Bermuda">Bermuda</option>
+      <option value="Bhutan">Bhutan</option>
+      <option value="Bolivia">Bolivia</option>
+      <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+      <option value="Botswana">Botswana</option>
+      <option value="Brazil">Brazil</option>
+      <option value="Brunei">Brunei</option>
+      <option value="Bulgaria">Bulgaria</option>
+      <option value="Burkina Faso">Burkina Faso</option>
+      <option value="Burma">Burma</option>
+      <option value="Burundi">Burundi</option>
+      <option value="Cambodia">Cambodia</option>
+      <option value="Cameroon">Cameroon</option>
+      <option value="Canada">Canada</option>
+      <option value="Cape Verde">Cape Verde</option>
+      <option value="Central African Republic">Central African Republic</option>
+      <option value="Chad">Chad</option>
+      <option value="Chile">Chile</option>
+      <option value="China">China</option>
+      <option value="Colombia">Colombia</option>
+      <option value="Comoros">Comoros</option>
+      <option value="Congo, Democratic Republic">Congo, Democratic Republic</option>
+      <option value="Congo, Republic of the">Congo, Republic of the</option>
+      <option value="Costa Rica">Costa Rica</option>
+      <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+      <option value="Croatia">Croatia</option>
+      <option value="Cuba">Cuba</option>
+      <option value="Cyprus">Cyprus</option>
+      <option value="Czech Republic">Czech Republic</option>
+      <option value="Denmark">Denmark</option>
+      <option value="Djibouti">Djibouti</option>
+      <option value="Dominica">Dominica</option>
+      <option value="Dominican Republic">Dominican Republic</option>
+      <option value="East Timor">East Timor</option>
+      <option value="Ecuador">Ecuador</option>
+      <option value="Egypt">Egypt</option>
+      <option value="El Salvador">El Salvador</option>
+      <option value="Equatorial Guinea">Equatorial Guinea</option>
+      <option value="Eritrea">Eritrea</option>
+      <option value="Estonia">Estonia</option>
+      <option value="Ethiopia">Ethiopia</option>
+      <option value="Fiji">Fiji</option>
+      <option value="Finland">Finland</option>
+      <option value="France">France</option>
+      <option value="Gabon">Gabon</option>
+      <option value="Gambia">Gambia</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Germany">Germany</option>
+      <option value="Ghana">Ghana</option>
+      <option value="Greece">Greece</option>
+      <option value="Greenland">Greenland</option>
+      <option value="Grenada">Grenada</option>
+      <option value="Guatemala">Guatemala</option>
+      <option value="Guinea">Guinea</option>
+      <option value="Guinea-Bissau">Guinea-Bissau</option>
+      <option value="Guyana">Guyana</option>
+      <option value="Haiti">Haiti</option>
+      <option value="Honduras">Honduras</option>
+      <option value="Hong Kong">Hong Kong</option>
+      <option value="Hungary">Hungary</option>
+      <option value="Iceland">Iceland</option>
+      <option value="India">India</option>
+      <option value="Indonesia">Indonesia</option>
+      <option value="Iran">Iran</option>
+      <option value="Iraq">Iraq</option>
+      <option value="Ireland">Ireland</option>
+      <option value="Israel">Israel</option>
+      <option value="Italy">Italy</option>
+      <option value="Jamaica">Jamaica</option>
+      <option value="Japan">Japan</option>
+      <option value="Jordan">Jordan</option>
+      <option value="Kazakhstan">Kazakhstan</option>
+      <option value="Kenya">Kenya</option>
+      <option value="Kiribati">Kiribati</option>
+      <option value="Korea North">Korea North</option>
+      <option value="Korea South">Korea South</option>
+      <option value="Kuwait">Kuwait</option>
+      <option value="Kyrgyzstan">Kyrgyzstan</option>
+      <option value="Laos">Laos</option>
+      <option value="Latvia">Latvia</option>
+      <option value="Lebanon">Lebanon</option>
+      <option value="Lesotho">Lesotho</option>
+      <option value="Liberia">Liberia</option>
+      <option value="Libya">Libya</option>
+      <option value="Liechtenstein">Liechtenstein</option>
+      <option value="Lithuania">Lithuania</option>
+      <option value="Luxembourg">Luxembourg</option>
+      <option value="Macedonia">Macedonia</option>
+      <option value="Madagascar">Madagascar</option>
+      <option value="Malawi">Malawi</option>
+      <option value="Malaysia">Malaysia</option>
+      <option value="Maldives">Maldives</option>
+      <option value="Mali">Mali</option>
+      <option value="Malta">Malta</option>
+      <option value="Marshall Islands">Marshall Islands</option>
+      <option value="Mauritania">Mauritania</option>
+      <option value="Mauritius">Mauritius</option>
+      <option value="Mexico">Mexico</option>
+      <option value="Micronesia">Micronesia</option>
+      <option value="Moldova">Moldova</option>
+      <option value="Mongolia">Mongolia</option>
+      <option value="Morocco">Morocco</option>
+      <option value="Monaco">Monaco</option>
+      <option value="Mozambique">Mozambique</option>
+      <option value="Namibia">Namibia</option>
+      <option value="Nauru">Nauru</option>
+      <option value="Nepal">Nepal</option>
+      <option value="Netherlands">Netherlands</option>
+      <option value="New Zealand">New Zealand</option>
+      <option value="Nicaragua">Nicaragua</option>
+      <option value="Niger">Niger</option>
+      <option value="Nigeria">Nigeria</option>
+      <option value="Norway">Norway</option>
+      <option value="Oman">Oman</option>
+      <option value="Pakistan">Pakistan</option>
+      <option value="Panama">Panama</option>
+      <option value="Papua New Guinea">Papua New Guinea</option>
+      <option value="Paraguay">Paraguay</option>
+      <option value="Peru">Peru</option>
+      <option value="Philippines">Philippines</option>
+      <option value="Poland">Poland</option>
+      <option value="Portugal">Portugal</option>
+      <option value="Qatar">Qatar</option>
+      <option value="Romania">Romania</option>
+      <option value="Russia">Russia</option>
+      <option value="Rwanda">Rwanda</option>
+      <option value="Samoa">Samoa</option>
+      <option value="San Marino">San Marino</option>
+      <option value="Sao Tome">Sao Tome</option>
+      <option value="Saudi Arabia">Saudi Arabia</option>
+      <option value="Senegal">Senegal</option>
+      <option value="Serbia and Montenegro">Serbia and Montenegro</option>
+      <option value="Seychelles">Seychelles</option>
+      <option value="Sierra Leone">Sierra Leone</option>
+      <option value="Singapore">Singapore</option>
+      <option value="Slovakia">Slovakia</option>
+      <option value="Slovenia">Slovenia</option>
+      <option value="Solomon Islands">Solomon Islands</option>
+      <option value="Somalia">Somalia</option>
+      <option value="South Africa">South Africa</option>
+      <option value="Spain">Spain</option>
+      <option value="Sri Lanka">Sri Lanka</option>
+      <option value="Sudan">Sudan</option>
+      <option value="Suriname">Suriname</option>
+      <option value="Swaziland">Swaziland</option>
+      <option value="Sweden">Sweden</option>
+      <option value="Switzerland">Switzerland</option>
+      <option value="Syria">Syria</option>
+      <option value="Taiwan">Taiwan</option>
+      <option value="Tajikistan">Tajikistan</option>
+      <option value="Tanzania">Tanzania</option>
+      <option value="Thailand">Thailand</option>
+      <option value="Togo">Togo</option>
+      <option value="Tonga">Tonga</option>
+      <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+      <option value="Tunisia">Tunisia</option>
+      <option value="Turkey">Turkey</option>
+      <option value="Turkmenistan">Turkmenistan</option>
+      <option value="Uganda">Uganda</option>
+      <option value="Ukraine">Ukraine</option>
+      <option value="United Arab Emirates">United Arab Emirates</option>
+      <option value="United Kingdom">United Kingdom</option>
+      <option value="United States">United States</option>
+      <option value="Uruguay">Uruguay</option>
+      <option value="Uzbekistan">Uzbekistan</option>
+      <option value="Vanuatu">Vanuatu</option>
+      <option value="Venezuela">Venezuela</option>
+      <option value="Vietnam">Vietnam</option>
+      <option value="Yemen">Yemen</option>
+      <option value="Zambia">Zambia</option>
+      <option value="Zimbabwe">Zimbabwe</option>
+ </datalist>
+  </select>
+  </div>
+  <div id="id-0121-014-01-01">
+  <select class="c-sel"  name="state" list="states__"  onfocus ="f4rwc3('cou-4fsdfsd--asdfadsss', 'ia-hfadojd');" id="ia-hfadojd"  value="{{state}}" style="{{statealert}}" placeholder="State" required type="text" id="cou-4fsdfsd--asdfadsss" list="countries-797" name="country" value="{{country}}" style="{{countalert}}" placeholder="Country" required>
+
+ {% if logged_in %}
+ <option value='{{state}}'>{{state}}</option>
+ {% endif %}
+ {% if not logged_in %}
+ <option value='State' disable>State</option>
+ {% endif %}
+  </select>
+  </div>
+  <div id="id-0121-014-01-01">
+  <input class="c-sel" type="text" name="city" value="NONE" placeholder="City">
+  </div>
+  <div id="id-0121-014-01-01">
+  <select class="c-sel" type="text" list="categories__" name="category" value="general" style="" placeholder="Category" required>
+    {% if logged_in %}
+    <option value='{{category}}'>{{category}}</option>
+    {% endif %}
+    {% if not logged_in %}
+    <option value='' disable>Category</option>
+    {% endif %}
+    <option value="General">General</option>
+    <option value="Business & Finance">Business & Finance</option>
+    <option value="Sports">Sports</option>
+    <option value="Politics">Politics</option>
+    <option value="Entertainment">Entertainment</option>
+    <option value="Technology">Technology</option>
+    <option value="Science">Science</option>
+  </select>
+  </div>
+  <div id="id-0121-014-01-05">
+
+  <button type="submit" class="cl-btn-0190 cl-app-b" id="id-btn-0190">
+  Apply
+  </button>
+
+  <span>or
+    {% if code_342 %}
+    <a style="padding-left: 5px;" href="/news/read?tpe=ww" style="padding-top:3px" class="c-fo-no cl-bg-b">Worldwide</a></span>
+     {% endif %}
+  </div>
+  </form>
+  </div>
+  <div class="c-s-ad-n-r">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7237681015099481"
+    crossorigin="anonymous"></script>
+<!-- side/news/read/right -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-7237681015099481"
+    data-ad-slot="5519613231"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>
+    <div id="id-19-">
+      <div class="c-fo-hi">Recent blog posts</div>
+      <div id="id-3423404-1234123840df083042">
+
+        {% for i in recent_blogs %}
+      <!--<div  class="c-bx-no" id="id-6876v-b858b76n98n79885" style='box-shadow: 0px 0px 1px 0px; width: 93%'>
+        <div id="id-96987c76-69v8769875">
+
+            {{i.author}}
+
+        </div>
+
+        <div id="id-3249a0df0af09a3-234" style="display:inline-grid">
+            {% if i.tbnail != None %}
+            <img id="id-845-sdf8a7d9" src="{{i.tbnail}}" alt="loading">
+            {% endif %}
+      </div>
+      <div id="id-340239842-asfasdf3234" style="display:inline-block">
+       <a href="/blog/read/view/{{i.heading_url}}">{{i.heading}}</a>
+    </div>
+
+      </div>-->
+      {% endfor %}
+
+
+    </div>
+    </div>
+    </div>
+  </div>
+  <div id="i-f-pe">
+    <div class="c-t-ad-n-r">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7237681015099481"
+      crossorigin="anonymous"></script>
+ <!-- top(1)/news/read -->
+ <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-7237681015099481"
+      data-ad-slot="3127585311"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+ <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+ </script>
+    </div>
+
+   <div class="c-f-m c-p-d">
+      Home / News / Read
+    </div>
+
+<div id="i-p-ec">
+<div id="i-b-c-to-">
+    {% if response[0].can_display_une == "1" %}
+            {% if response[0].author != 'admin' %}
+        <div class="cl-he-d-l" id="i-da">
+
+               {{response[0].author}}
+
+        </div>
+        {% endif %}
+            {% endif %}
+        <div class="cl-he-d" id="i-da">
+           {{response[0].date}}
+        </div>
+      </div>
+    {% if response[0].tbnail != None %}
+      <img src="{{response[0].tbnail}}" width="90%" height="auto">
+    {% endif %}
+    {% if response[0].tbnail == None %}
+    <div class="c-pre-l">
+    </div>
+    {% endif %}
+
+      <div class="c-h-te" id="i-dnv">
+         <a href="/news/read/view/{{response[0].heading_url}}">{{response[0].heading}}</a>
+      </div>
+    </div>
+    <div class="c-t-ad-n-r c-m-no-_ c-h-l">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7237681015099481"
+      crossorigin="anonymous"></script>
+ <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-format="fluid"
+      data-ad-layout-key="-ef+6k-30-ac+ty"
+      data-ad-client="ca-pub-7237681015099481"
+      data-ad-slot="4753875215"></ins>
+ <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+ </script>
+    </div>
+    <div id="i-p-ec-1">
+        {% for i in response[1:] %}
+    <div id="id-6876v-b858b76n98n79885">
+      <div id="id-96987c76-69v8769875">
+          {% if i.can_display_une == "1" %}
+          {% if i.author != 'admin' %}
+          {{i.author}}
+          {% endif %}
+          {% endif %}
+      </div>
+      <div id="id-qwer0q9wer-4234i234i">
+          <div id="id-3420-adf9s">{{i.date}}</div>
+          {% if i.time_ago != None %}
+          <div  id="id-3420-adf9s-0">{{i.time_ago}}</div>
+          {% endif %}
+        </div>
+      <div id="id-3249a0df0af09a3-234">
+        {% if i.tbnail != None %}
+        <img id="id-845-sdf8a7d9" src="{{i.tbnail}}" alt="loading">
+         {% endif %}
+      </div>
+      <div id="id-340239842-asfasdf3234">
+            <a href="/news/read/view/{{i.heading_url}}">{{i.heading}}</a>
+      </div>
+
+      <div id="id-42038424-fds8f9a73424-4234">
+         <div id="id-96987c76-69v876987532">
+           {{i.category}}
+         </div>
+         <div id="id-96987c76-69v876987532">
+            {{i.country}}
+         </div>
+         <div id="id-96987c76-69v876987532">
+            {{i.state}}
+        </div>
+      </div>
+
+      <div id="id-340239842-asfasdf3235">
+             <div id="id-sh-96h_saf--ads8f0">
+                          <a title="Tweet" target="_blank" href="http://twitter.com/intent/tweet?text={{i.heading}}&url=https://www.lastevents.space/news/read/view/{{i.heading_url}}" rel="nofollow noopener">
+                            <div id="id-sh-btn-asssf">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zm-59.942 195.935a161.34 161.34 0 0 1-47.079 12.85c16.914-10.086 29.894-26.22 36.095-45.413-15.862 9.39-33.473 16.287-52.087 19.96-15.048-15.92-36.343-25.83-59.942-25.83-45.331 0-82.04 36.685-82.04 82.016 0 6.355.685 12.626 2.09 18.674-68.186-3.484-128.647-36.13-169.148-85.785a82.08 82.08 0 0 0-11.126 41.245c0 28.465 14.457 53.623 36.485 68.257-13.465-.39-26.068-4.11-37.206-10.205v1.04c0 39.756 28.3 72.969 65.86 80.48a82.817 82.817 0 0 1-21.627 2.883c-5.291 0-10.405-.52-15.472-1.477 10.453 32.587 40.713 56.351 76.642 57-28.134 22.04-63.473 35.163-101.954 35.163-6.65 0-13.134-.39-19.606-1.146 36.39 23.362 79.524 36.85 125.872 36.85 150.935 0 233.507-125.056 233.507-233.494 0-3.603-.06-7.122-.236-10.654 16.027-11.457 29.965-25.937 40.925-42.378l.048-.036z"/></svg>
+                            </div>
+                          </a>
+                          <a title="Whatsapp" target="_blank" href="https://api.whatsapp.com/send?text={{i.heading}} https://www.lastevents.space/news/read/view/{{i.heading_url}}" rel="nofollow noopener">
+                          <div  id="id-sh-btn-asssf">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zM473.143 165.876c-40.666-40.748-94.726-63.166-152.34-63.166-118.655 0-215.223 96.592-215.223 215.329 0 37.95 9.921 75.036 28.772 107.647l-30.59 111.604 114.178-29.93c31.489 17.138 66.887 26.21 102.863 26.21h.071c118.667 0 215.353-96.604 215.353-215.319 0-57.579-22.394-111.639-63.084-152.364v-.011zm-152.27 331.362c-32.185 0-63.662-8.67-91.135-24.98l-6.555-3.898-67.76 17.776 18.094-66.06-4.217-6.792c-18.06-28.43-27.425-61.347-27.425-95.221 0-98.706 80.28-179.057 179.093-179.057 47.776 0 92.812 18.697 126.58 52.477 33.744 33.827 52.359 78.768 52.359 126.639-.095 98.788-80.399 179.093-179.034 179.093v.023zm98.139-134.116c-5.339-2.705-31.831-15.65-36.756-17.469-4.89-1.842-8.516-2.752-12.166 2.693-3.52 5.363-13.878 17.54-17.032 21.154-3.141 3.555-6.26 4.04-11.61 1.347-5.374-2.693-22.784-8.41-43.312-26.717-15.98-14.292-26.787-31.938-29.953-37.288-3.177-5.315-.342-8.339 2.386-10.926 2.48-2.41 5.374-6.295 8.09-9.437 2.73-3.141 3.556-5.338 5.351-9 1.772-3.543.898-6.673-.449-9.413-1.346-2.693-12.153-29.221-16.523-39.993-4.335-10.524-8.823-9.06-12.142-9.272-3.166-.13-6.697-.13-10.288-.13-3.543 0-9.378 1.335-14.35 6.733-4.926 5.327-18.827 18.378-18.827 44.87 0 26.493 19.228 52.04 21.957 55.69 2.74 3.567 37.96 57.957 91.926 81.26 12.839 5.493 22.855 8.8 30.638 11.328 12.922 4.11 24.615 3.508 33.886 2.138 10.323-1.524 31.82-12.98 36.32-25.572 4.523-12.579 4.523-23.303 3.153-25.535-1.287-2.398-4.819-3.697-10.287-6.473l-.012.012z"/></svg>
+                          </div>
+                          </a>
+                          <a  title="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.lastevents.space/news/read/view/{{i.heading_url}}" rel="nofollow noopener">
+                              <div id="id-sh-btn-asssf">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm186 1117h311V744h-311c-240 0-435 195-435 435v186h-249v373h249v994h373v-994h311l62-373h-373v-186c0-34 28-62 62-62z"/></svg>
+                              </div>
+                          </a>
+            </div>
+      </div>
+    </div>
+    {% if response[1:].index(i) == 2 or response[1:].index(i) == 4 or response[1:].index(i) == 6 or response[1:].index(i) == 8 %}
+    <div class="c-t-ad-n-r c-m-no-_ c-h-l">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7237681015099481"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ef+6k-30-ac+ty"
+     data-ad-client="ca-pub-7237681015099481"
+     data-ad-slot="4753875215"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+    {% endif %}
+   {% endfor %}
+</div>
+
+<script>
+  $.ajax({
+    type:'POST',
+    url:`/blog/rec/ho`,
+    data:JSON.stringify({}),
+    contentType:"application/json",
+    dataType:'json',
+    success:function(response){
+      resp = response.response; 
+      parw0q8 = document.getElementById("id-3423404-1234123840df083042");
+      for(i=0;i<resp.length;i++){
+        dafo = `<div  class="c-bx-no" id="id-6876v-b858b76n98n79885" style='box-shadow: 0px 0px 1px 0px; width: 93%'>
+          <div id="id-96987c76-69v8769875">
+              ${resp[i].author}
+          </div>
+          <div id="id-3249a0df0af09a3-234" style="display:inline-grid">
+              <img id="id-845-sdf8a7d9" src="${resp[i].tbnail}" alt="loading">
+        </div>
+        <div id="id-340239842-asfasdf3234" style="display:inline-block">
+         <a href="/blog/read/view/${resp[i].heading_url}">${resp[i].heading}</a>
+      </div>
+        </div>`
+        ldfa = document.createElement("div");
+        ldfa.innerHTML = dafo;
+        parw0q8.appendChild(ldfa);
+       }
+    }
+   }) 
+
+</script>
+{% endblock %}

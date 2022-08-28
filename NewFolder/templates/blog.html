@@ -1,0 +1,379 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  body{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  ._05-uti{
+    width: 60%;
+    margin: auto;
+  }
+
+  #_05-oli{
+  /*  height: 40px; */
+  /*  background: yellow; */
+  }
+
+  ._05-poq{
+    padding: 10px;
+    width: fit-content;
+  /*   border-left: 3px solid gray; */
+    border-top: 2px solid gray;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  ._05-poq span{
+    margin-left: 25px;
+  }
+
+  ._05-opq{
+    width: 100%;
+    position: relative;
+  }
+
+  ._05-oiq{
+  /*   height: 100px; */
+    width: 30%;
+  /*   background: green; */
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0px -5px 9px 3px #b0b0b0;
+  }
+
+  ._19-cox{
+    display: none;
+    width: 100px;
+    text-align: center;
+    background: #2a2a2a;
+    box-shadow: 0px 0px 10px 1px #b0b0b0;
+    padding: 8px 8px 5px 8px;
+    border-radius: 5px;
+    position: absolute;
+    right: -30px;
+    top: -26px;
+  }
+
+  #id-sh-btn-asssf svg{
+     fill: white;
+  }
+
+  ._19-vmo{
+    display: inline-grid;
+    width: 30%;
+  }
+
+  ._05-iur{
+  /*   background: red; */
+    width: 100%;
+  /*   height: 100px; */
+  /*   position: absolute; */
+    right: 0px;
+    top: 0px;
+    border-top-right-radius: 30px;
+      /* height: 100px; */
+      box-shadow: 4px 6px 17px 4px #eceaea;
+  /*   border-left: 2px solid gray; */
+  /*     border-bottom: 1px solid; */
+  }
+
+  ._05-ipv{
+    width: 100%;
+  }
+
+  ._05-pwq{
+    padding: 10px 15px;
+    font-size: 27px;
+  }
+
+  ._05-pox{
+    padding: 10px 15px;
+  }
+
+  ._05-pit{
+    padding: 10px 15px;;
+  }
+
+  ._05-ort{
+    padding: 4px 7px;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    color: black;
+  }
+
+  ._05-ort {
+     text-decoration: none;
+  }
+
+  ._05-iru{
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    padding: 10px 0px;
+    position: relative;
+  }
+
+  ._05-iru span{
+    cursor: pointer;
+  }
+
+  ._05-ret{
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  ._05-jbv{
+    width: 98%;
+    margin: auto;
+    margin-top: 70px;
+    position: relative;
+  }
+
+  ._09-vco{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+    ._pr-lo2{
+      border: 10px solid black;
+      border-top: 10px solid transparent;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      animation-name: pre43;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    @keyframes pre43{
+      00%{transform:rotate(0deg);}
+      100%{transform:rotate(360deg);}
+    }
+
+    ._05-hin{
+          margin-top: 20pc;
+    }
+
+  @media screen and (max-width:900px){
+    ._05-uti{
+      width: 98%;
+    }
+      ._05-ret{
+      padding-top: 20px;
+    }
+    ._05-pwq{
+      font-size: 24px;
+    }
+  }
+</style>
+
+<div id="_05-xxo" class="_05-hin">
+  <div class="_09-vco">
+    <div class="_pr-lo2">
+
+    </div>
+  </div>
+ <!--<div class="_05-jbv">
+  <div class="_05-uti" id="_05-oli">
+    <div class="_05-poq">Author<span>07 Jul, 2022</span></div>
+    <div class="_05-opq">
+      <div class="_05-oiq">
+        <img class="_05-ipv" src="https://images.pexels.com/photos/302743/pexels-photo-302743.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+      </div>
+      <div class="_05-iur">
+        <div class="_05-pwq">title of the aritlce will be take place here and the space will be given accurately</div>
+        <div class="_05-pox">5 min read</div>
+        <div class="_05-pit">
+          <button class="_05-ort">Read</button>
+        </div>
+        <div class="_05-ret">
+          <div class="_05-iru"><span class="material-symbols-outlined">
+  check_box
+  </span></div>
+          <div class="_05-iru"><span class="material-symbols-outlined">
+  comment
+  </span></div>
+          <div class="_05-iru"><span class="material-symbols-outlined">
+  share
+  </span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+-->
+</div>
+
+<script>
+  ps30 = [];
+  rodf = 0;
+  vauro = 3;
+  $.ajax({
+    type:'POST',
+    url:`/blog/rec/ho`,
+    data:JSON.stringify({}),
+    contentType:"application/json",
+    dataType:'json',
+    success:function(response){
+      resp = response.response;
+      ps30 = resp;
+      parw0q8 = document.getElementById("_05-xxo");
+      parw0q8.innerHTML = "";
+      for(i=0;i<vauro;i++){
+        n = resp[i];
+        vaoao = n.read_time;
+        if (vaoao == 0){
+          vaoao = 1;
+        }
+        avaoi =  `
+        <div class="_05-oiq"><img class="_05-ipv" src="${n.tbnail}"></div>`;
+        if (vaoao == 0){
+         vaoao = 1;
+        }
+        if (n.tbnail == null){
+          avaoi = ``
+        }
+        dafo=`
+        <div class="_05-jbv">
+          <div class="_05-uti" id="_05-oli">
+            <div class="_05-poq">${n.author}<span>${n.date}</span></div>
+            <div class="_05-opq">
+
+                    ${avaoi}
+              <div class="_05-iur">
+                <div class="_05-pwq">${n.heading}</div>
+                <div class="_05-pox">${vaoao} min read</div>
+                <div class="_05-pit">
+                  <a class="_05-ort" href="/blog/read/view/${n.heading_url}">Read</a>
+                </div>
+                <div class="_05-ret">
+                  <div class="_05-iru"><span class="material-symbols-outlined" id="_05-iru" data-element="_07-cox-${i+10}">
+          share
+          </span>                    <div class="_19-cox" id="_07-cox-${i+10}" data-element="true">
+            <div class="_19-vmo">
+                   <a title="Tweet" target="_blank" href="https://twitter.com/intent/tweet?text=${n.heading}&amp;url=https://www.lastevents.space/blog/read/view/${n.heading_url}" rel="nofollow noopener">
+          <div id="id-sh-btn-asssf">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zm-59.942 195.935a161.34 161.34 0 0 1-47.079 12.85c16.914-10.086 29.894-26.22 36.095-45.413-15.862 9.39-33.473 16.287-52.087 19.96-15.048-15.92-36.343-25.83-59.942-25.83-45.331 0-82.04 36.685-82.04 82.016 0 6.355.685 12.626 2.09 18.674-68.186-3.484-128.647-36.13-169.148-85.785a82.08 82.08 0 0 0-11.126 41.245c0 28.465 14.457 53.623 36.485 68.257-13.465-.39-26.068-4.11-37.206-10.205v1.04c0 39.756 28.3 72.969 65.86 80.48a82.817 82.817 0 0 1-21.627 2.883c-5.291 0-10.405-.52-15.472-1.477 10.453 32.587 40.713 56.351 76.642 57-28.134 22.04-63.473 35.163-101.954 35.163-6.65 0-13.134-.39-19.606-1.146 36.39 23.362 79.524 36.85 125.872 36.85 150.935 0 233.507-125.056 233.507-233.494 0-3.603-.06-7.122-.236-10.654 16.027-11.457 29.965-25.937 40.925-42.378l.048-.036z"></path></svg>
+          </div>
+          </a>
+            </div>
+            <div class="_19-vmo"><a title="Whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=${n.heading} https://www.lastevents.space/blog/read/view/${n.heading_url}" rel="nofollow noopener">
+          <div id="id-sh-btn-asssf">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zM473.143 165.876c-40.666-40.748-94.726-63.166-152.34-63.166-118.655 0-215.223 96.592-215.223 215.329 0 37.95 9.921 75.036 28.772 107.647l-30.59 111.604 114.178-29.93c31.489 17.138 66.887 26.21 102.863 26.21h.071c118.667 0 215.353-96.604 215.353-215.319 0-57.579-22.394-111.639-63.084-152.364v-.011zm-152.27 331.362c-32.185 0-63.662-8.67-91.135-24.98l-6.555-3.898-67.76 17.776 18.094-66.06-4.217-6.792c-18.06-28.43-27.425-61.347-27.425-95.221 0-98.706 80.28-179.057 179.093-179.057 47.776 0 92.812 18.697 126.58 52.477 33.744 33.827 52.359 78.768 52.359 126.639-.095 98.788-80.399 179.093-179.034 179.093v.023zm98.139-134.116c-5.339-2.705-31.831-15.65-36.756-17.469-4.89-1.842-8.516-2.752-12.166 2.693-3.52 5.363-13.878 17.54-17.032 21.154-3.141 3.555-6.26 4.04-11.61 1.347-5.374-2.693-22.784-8.41-43.312-26.717-15.98-14.292-26.787-31.938-29.953-37.288-3.177-5.315-.342-8.339 2.386-10.926 2.48-2.41 5.374-6.295 8.09-9.437 2.73-3.141 3.556-5.338 5.351-9 1.772-3.543.898-6.673-.449-9.413-1.346-2.693-12.153-29.221-16.523-39.993-4.335-10.524-8.823-9.06-12.142-9.272-3.166-.13-6.697-.13-10.288-.13-3.543 0-9.378 1.335-14.35 6.733-4.926 5.327-18.827 18.378-18.827 44.87 0 26.493 19.228 52.04 21.957 55.69 2.74 3.567 37.96 57.957 91.926 81.26 12.839 5.493 22.855 8.8 30.638 11.328 12.922 4.11 24.615 3.508 33.886 2.138 10.323-1.524 31.82-12.98 36.32-25.572 4.523-12.579 4.523-23.303 3.153-25.535-1.287-2.398-4.819-3.697-10.287-6.473l-.012.012z"></path></svg>
+          </div>
+          </a></div>
+            <div class="_19-vmo"><a title="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.lastevents.space/blog/read/view/${n.heading_url}" rel="nofollow noopener">
+          <div id="id-sh-btn-asssf">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm186 1117h311V744h-311c-240 0-435 195-435 435v186h-249v373h249v994h373v-994h311l62-373h-373v-186c0-34 28-62 62-62z"></path></svg>
+          </div>
+          </a></div>
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+      `
+        ldfa = document.createElement("div");
+        ldfa.setAttribute("id","_05-cqt");
+        ldfa.innerHTML = dafo;
+        parw0q8.appendChild(ldfa);
+      }
+      rodf = vauro;
+    }
+  })
+  v342 = 0;
+  document.addEventListener("scroll", ()=>{
+    if(pageYOffset > (document.body.offsetHeight-1000) && v342 == 0)
+    {
+      v342 = 1;
+          for(i = rodf;i < rodf+vauro; i++){
+          n = ps30[i];
+          vaoao = n.read_time;
+          avaoi =  `
+          <div class="_05-oiq"><img class="_05-ipv" src="${n.tbnail}"></div>`;
+          if (vaoao == 0){
+           vaoao = 1;
+          }
+          if (n.tbnail == null){
+            avaoi = ``
+          }
+
+          dafo = `<div class="_05-jbv">
+            <div class="_05-uti" id="_05-oli">
+              <div class="_05-poq">${n.author}<span>${n.date}</span></div>
+              <div class="_05-opq">
+
+                  ${avaoi}
+                <div class="_05-iur">
+                  <div class="_05-pwq">${n.heading}</div>
+                  <div class="_05-pox">${vaoao} min read</div>
+                  <div class="_05-pit">
+                    <a class="_05-ort" href="/blog/read/view/${n.heading_url}">Read</a>
+                  </div>
+                  <div class="_05-ret">
+
+                    <div class="_05-iru"><span class="material-symbols-outlined" id="_05-iru" data-element="_07-cox-${i+10}">
+            share
+                    </span>
+                    <div class="_19-cox" id="_07-cox-${i+10}" data-element="true">
+                      <div class="_19-vmo">
+                             <a title="Tweet" target="_blank" href="https://twitter.com/intent/tweet?text=${n.heading}&amp;url=https://www.lastevents.space/blog/read/view/${n.heading_url}" rel="nofollow noopener">
+                    <div id="id-sh-btn-asssf">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zm-59.942 195.935a161.34 161.34 0 0 1-47.079 12.85c16.914-10.086 29.894-26.22 36.095-45.413-15.862 9.39-33.473 16.287-52.087 19.96-15.048-15.92-36.343-25.83-59.942-25.83-45.331 0-82.04 36.685-82.04 82.016 0 6.355.685 12.626 2.09 18.674-68.186-3.484-128.647-36.13-169.148-85.785a82.08 82.08 0 0 0-11.126 41.245c0 28.465 14.457 53.623 36.485 68.257-13.465-.39-26.068-4.11-37.206-10.205v1.04c0 39.756 28.3 72.969 65.86 80.48a82.817 82.817 0 0 1-21.627 2.883c-5.291 0-10.405-.52-15.472-1.477 10.453 32.587 40.713 56.351 76.642 57-28.134 22.04-63.473 35.163-101.954 35.163-6.65 0-13.134-.39-19.606-1.146 36.39 23.362 79.524 36.85 125.872 36.85 150.935 0 233.507-125.056 233.507-233.494 0-3.603-.06-7.122-.236-10.654 16.027-11.457 29.965-25.937 40.925-42.378l.048-.036z"></path></svg>
+                    </div>
+                    </a>
+                      </div>
+                      <div class="_19-vmo"><a title="Whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=${n.heading} https://www.lastevents.space/blog/read/view/${n.heading_url} ${n.heading_url}" rel="nofollow noopener">
+                    <div id="id-sh-btn-asssf">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zM473.143 165.876c-40.666-40.748-94.726-63.166-152.34-63.166-118.655 0-215.223 96.592-215.223 215.329 0 37.95 9.921 75.036 28.772 107.647l-30.59 111.604 114.178-29.93c31.489 17.138 66.887 26.21 102.863 26.21h.071c118.667 0 215.353-96.604 215.353-215.319 0-57.579-22.394-111.639-63.084-152.364v-.011zm-152.27 331.362c-32.185 0-63.662-8.67-91.135-24.98l-6.555-3.898-67.76 17.776 18.094-66.06-4.217-6.792c-18.06-28.43-27.425-61.347-27.425-95.221 0-98.706 80.28-179.057 179.093-179.057 47.776 0 92.812 18.697 126.58 52.477 33.744 33.827 52.359 78.768 52.359 126.639-.095 98.788-80.399 179.093-179.034 179.093v.023zm98.139-134.116c-5.339-2.705-31.831-15.65-36.756-17.469-4.89-1.842-8.516-2.752-12.166 2.693-3.52 5.363-13.878 17.54-17.032 21.154-3.141 3.555-6.26 4.04-11.61 1.347-5.374-2.693-22.784-8.41-43.312-26.717-15.98-14.292-26.787-31.938-29.953-37.288-3.177-5.315-.342-8.339 2.386-10.926 2.48-2.41 5.374-6.295 8.09-9.437 2.73-3.141 3.556-5.338 5.351-9 1.772-3.543.898-6.673-.449-9.413-1.346-2.693-12.153-29.221-16.523-39.993-4.335-10.524-8.823-9.06-12.142-9.272-3.166-.13-6.697-.13-10.288-.13-3.543 0-9.378 1.335-14.35 6.733-4.926 5.327-18.827 18.378-18.827 44.87 0 26.493 19.228 52.04 21.957 55.69 2.74 3.567 37.96 57.957 91.926 81.26 12.839 5.493 22.855 8.8 30.638 11.328 12.922 4.11 24.615 3.508 33.886 2.138 10.323-1.524 31.82-12.98 36.32-25.572 4.523-12.579 4.523-23.303 3.153-25.535-1.287-2.398-4.819-3.697-10.287-6.473l-.012.012z"></path></svg>
+                    </div>
+                    </a></div>
+                      <div class="_19-vmo"><a title="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.lastevents.space/blog/read/view/${n.heading_url}" rel="nofollow noopener">
+                    <div id="id-sh-btn-asssf">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm186 1117h311V744h-311c-240 0-435 195-435 435v186h-249v373h249v994h373v-994h311l62-373h-373v-186c0-34 28-62 62-62z"></path></svg>
+                    </div>
+                    </a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+             `
+        ldfa = document.createElement("div");
+        ldfa.innerHTML = dafo;
+        parw0q8.appendChild(ldfa);
+                }
+                rodf = rodf + vauro;
+                v342 = 0;
+                      }
+  })
+  document.addEventListener("DOMContentLoaded", (e)=>{
+    document.addEventListener("click", (e)=>{
+      if(e.target.id == "_05-iru"){
+      vshr = document.getElementById(e.target.dataset.element);
+        if(vshr.dataset.element == "true"){
+      vshr.style.display="block";
+          vshr.setAttribute("data-element", "false");
+        }else if(vshr.dataset.element == "false"){
+      vshr.style.display="none";
+          vshr.setAttribute("data-element", "true");
+        }
+    }
+    })
+  })
+
+</script>
+{% endblock %}
